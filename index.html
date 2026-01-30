@@ -9,7 +9,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap');
 
-
     * {
         margin: 0;
         padding: 0;
@@ -168,19 +167,31 @@
         font-size: 14px;
     }
     
+    .skills-section {
+        margin-bottom: 25px;
+    }
+    
+    .skills-category {
+        font-family: 'Oswald', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        color: #764ba2;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 15px 0 8px 0;
+    }
+    
     .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
     }
     
     .skill-item {
         background: #f8f9fa;
-        padding: 8px 12px;
+        padding: 6px 10px;
         border-radius: 4px;
-        font-size: 13px;
-        text-align: center;
+        font-size: 11px;
         font-weight: 400;
     }
     
@@ -219,6 +230,54 @@
     .header a:hover {
         background: rgba(255,255,255,0.25) !important;
     }
+
+    .project {
+        margin-bottom: 18px;
+        padding-left: 15px;
+        border-left: 2px solid #e0e0e0;
+    }
+    
+    .project-name {
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: #667eea;
+    }
+    
+    .project-tagline {
+        font-size: 13px;
+        color: #333;
+        font-weight: 400;
+    }
+    
+    .project-description {
+        font-size: 13px;
+        color: #555;
+        margin: 4px 0;
+        line-height: 1.5;
+    }
+    
+    .project-insight {
+        font-size: 12px;
+        color: #764ba2;
+        font-style: italic;
+        margin: 4px 0;
+    }
+    
+    .project-meta {
+        font-size: 12px;
+        color: #888;
+    }
+    
+    .project-meta a {
+        color: #667eea;
+        text-decoration: none;
+    }
+    
+    .status-live { color: #16a34a; font-weight: 500; }
+    .status-progress { color: #d97706; font-weight: 500; }
+    .status-pending { color: #2563eb; font-weight: 500; }
+    .status-paused { color: #6b7280; font-weight: 500; }
     
     @media (max-width: 768px) {
         .two-column {
@@ -236,14 +295,8 @@
         .header h1 {
             font-size: 36px;
         }
-        
-        .skills-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
     }
 </style>
-
-
 </head>
 <body>
     <div class="container">
@@ -270,7 +323,6 @@
                 </div>
             </div>
         </div>
-
 
     <div class="content">
         <div class="two-column">
@@ -447,35 +499,395 @@
                 
                 <h2 class="section-title" style="margin-top: 35px;">Technical Skills</h2>
                 
-                <div class="skills-grid">
-                    <div class="skill-item">Solidity</div>
-                    <div class="skill-item">Rust</div>
-                    <div class="skill-item">TypeScript</div>
-                    <div class="skill-item">Python</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">React</div>
-                    <div class="skill-item">Node.js</div>
-                    <div class="skill-item">Next.js</div>
-                    <div class="skill-item">Swift</div>
-                    <div class="skill-item">Web3</div>
-                    <div class="skill-item">Smart Contracts</div>
-                    <div class="skill-item">NFTs</div>
-                    <div class="skill-item">DeFi</div>
-                    <div class="skill-item">AI</div>
-                    <div class="skill-item">LLMs</div>
-                    <div class="skill-item">AWS</div>
-                    <div class="skill-item">MongoDB</div>
-                    <div class="skill-item">Redis</div>
-                    <div class="skill-item">Supabase</div>
-                    <div class="skill-item">Firebase</div>
-                    <div class="skill-item">Docker</div>
-                    <div class="skill-item">SQL</div>
+                <div class="skills-section">
+                    <div class="skills-category">Languages</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">TypeScript</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Solidity</div>
+                        <div class="skill-item">Rust</div>
+                        <div class="skill-item">Swift</div>
+                        <div class="skill-item">SQL</div>
+                    </div>
+                    
+                    <div class="skills-category">Frontend</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">React</div>
+                        <div class="skill-item">Next.js</div>
+                        <div class="skill-item">Tailwind CSS</div>
+                        <div class="skill-item">Three.js</div>
+                        <div class="skill-item">Framer Motion</div>
+                        <div class="skill-item">React Three Fiber</div>
+                        <div class="skill-item">shadcn/ui</div>
+                        <div class="skill-item">Radix UI</div>
+                    </div>
+                    
+                    <div class="skills-category">Backend</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">Express</div>
+                        <div class="skill-item">FastAPI</div>
+                        <div class="skill-item">Edge Functions</div>
+                        <div class="skill-item">Deno</div>
+                        <div class="skill-item">REST APIs</div>
+                        <div class="skill-item">SSE/WebSockets</div>
+                    </div>
+                    
+                    <div class="skills-category">AI / ML</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">Claude API</div>
+                        <div class="skill-item">OpenAI API</div>
+                        <div class="skill-item">Gemini API</div>
+                        <div class="skill-item">MCP</div>
+                        <div class="skill-item">LLM Orchestration</div>
+                        <div class="skill-item">Multi-Agent Systems</div>
+                        <div class="skill-item">ElevenLabs</div>
+                        <div class="skill-item">Whisper</div>
+                        <div class="skill-item">TTS</div>
+                        <div class="skill-item">Stable Diffusion</div>
+                        <div class="skill-item">Replicate</div>
+                    </div>
+                    
+                    <div class="skills-category">Web3 / Blockchain</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">Smart Contracts</div>
+                        <div class="skill-item">Web3.js</div>
+                        <div class="skill-item">Ethers.js</div>
+                        <div class="skill-item">Solana</div>
+                        <div class="skill-item">DeFi</div>
+                        <div class="skill-item">NFTs</div>
+                        <div class="skill-item">Token Vesting</div>
+                        <div class="skill-item">Multichain</div>
+                    </div>
+                    
+                    <div class="skills-category">Databases</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">Supabase</div>
+                        <div class="skill-item">PostgreSQL</div>
+                        <div class="skill-item">MongoDB</div>
+                        <div class="skill-item">Redis</div>
+                        <div class="skill-item">Firebase</div>
+                        <div class="skill-item">RLS</div>
+                    </div>
+                    
+                    <div class="skills-category">Infrastructure</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">AWS</div>
+                        <div class="skill-item">Vercel</div>
+                        <div class="skill-item">Railway</div>
+                        <div class="skill-item">Docker</div>
+                        <div class="skill-item">S3/CloudFront</div>
+                        <div class="skill-item">Lambda</div>
+                        <div class="skill-item">Hetzner</div>
+                    </div>
+                    
+                    <div class="skills-category">Media / Video</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">FFmpeg</div>
+                        <div class="skill-item">HLS Streaming</div>
+                        <div class="skill-item">Web Audio API</div>
+                        <div class="skill-item">RecordRTC</div>
+                        <div class="skill-item">Sad Talker</div>
+                    </div>
+                    
+                    <div class="skills-category">Platforms</div>
+                    <div class="skills-grid">
+                        <div class="skill-item">Chrome Extensions</div>
+                        <div class="skill-item">watchOS</div>
+                        <div class="skill-item">iOS</div>
+                        <div class="skill-item">Stripe</div>
+                        <div class="skill-item">Google APIs</div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- PROJECTS SECTION -->
+        <h2 class="section-title" style="margin-top: 50px;">Projects <span style="font-weight: 300; font-size: 16px; color: #666;">— 36 shipped (15 Live, 6 In Progress, 3 Pending, 12 Paused)</span></h2>
+
+        <!-- AI INFRASTRUCTURE & DEVELOPER TOOLS -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI Infrastructure & Developer Tools</h3>
+        
+        <div class="project">
+            <span class="project-name">ChainLens</span> <span class="project-tagline">— AI Crypto Due Diligence Agent</span>
+            <div class="project-description">Institutional-grade crypto due diligence in seconds. Multi-agent AI performs parallel analysis: smart contract security, whitepaper legitimacy, tokenomics sustainability. Multi-chain (ETH, Base, Arbitrum, Polygon, Solana).</div>
+            <div class="project-insight">Replaces a $50K+ audit team. The infrastructure crypto funds pay six figures annually to access.</div>
+            <div class="project-meta"><a href="https://chainlens.space">chainlens.space</a> • <a href="https://github.com/futurehelp/chainlens">GitHub</a> • <span class="status-live">Live</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">Toolsy</span> <span class="project-tagline">— MCP Marketplace & No-Code Builder</span>
+            <div class="project-description">Connect productivity tools to Claude AI via Model Context Protocol. AI Wizard generates MCP servers from natural language. Full marketplace to buy/sell MCP tools.</div>
+            <div class="project-insight">MCP is still early — building marketplace infrastructure now is like building Shopify apps in 2010.</div>
+            <div class="project-meta"><a href="https://toolsy.today">toolsy.today</a> • <span class="status-progress">In Progress</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">IntentOS</span> <span class="project-tagline">— AI-Powered Intent Automation Platform</span>
+            <div class="project-description">Define automation goals in natural language → deploy intelligent agents. Multiple agent types: monitor, executor, analyzer, scheduler. Agent memory for persistent context.</div>
+            <div class="project-insight">The operating system for AI agents. What Zapier would be if built with LLMs at the core.</div>
+            <div class="project-meta"><a href="https://intentos.world">intentos.world</a> • <span class="status-progress">In Progress</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">VoiceBot</span> <span class="project-tagline">— Instant AI Voice Expert</span>
+            <div class="project-description">Ask the most complicated question, get a casual expert-level answer in seconds. Real-time voice transcription → Claude processing → response.</div>
+            <div class="project-insight">Voice-first AI that turns anyone into an instant expert. The UX Siri and Alexa wish they had.</div>
+            <div class="project-meta"><a href="https://digital-voice-expert.vercel.app">digital-voice-expert.vercel.app</a> • <span class="status-live">Live</span></div>
+        </div>
+
+        <!-- AI CONTENT & GENERATIVE MEDIA -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI Content & Generative Media</h3>
+        
+        <div class="project">
+            <span class="project-name">ThaigerWoodsKa</span> <span class="project-tagline">— Instagram Influencer AI Bot</span>
+            <div class="project-description">Full autonomous content pipeline: upload media → AI vision captions → ElevenLabs voiceover → Sad Talker animates celebrity faces with lip-sync → auto-posts to Instagram.</div>
+            <div class="project-insight">End-to-end AI content factory. The future of influencer marketing is autonomous.</div>
+            <div class="project-meta"><a href="https://www.instagram.com/imthaigerwoodska">instagram.com/imthaigerwoodska</a> • <span class="status-live">Live</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">Silk & Tears</span> <span class="project-tagline">— AI Short Film Generator</span>
+            <div class="project-description">Type a prompt → generates complete 5-scene video. Full pipeline: AI scriptwriting → scene generation → FFmpeg concatenation → S3 delivery. Pivoting to LA/NYC producer market.</div>
+            <div class="project-insight">Prompt-to-video with production pipeline is where the entire AI content industry is heading.</div>
+            <div class="project-meta"><a href="https://silkandtears.lol">silkandtears.lol</a> • <span class="status-live">Live</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">ReelPhysics</span> <span class="project-tagline">— AI Movie Physics Roaster</span>
+            <div class="project-description">Analyzes movies scene-by-scene, roasts impossible physics with actual formulas. 705+ movies analyzed. Currently used in a Junior High School physics curriculum.</div>
+            <div class="project-insight">Already deployed in school curriculum — that's product-market fit most EdTech startups never achieve.</div>
+            <div class="project-meta"><a href="https://reelphysics.lol">reelphysics.lol</a> • <a href="https://x.com/reelphysicsphd">Twitter</a> • <span class="status-live">Live</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">StyleShift</span> <span class="project-tagline">— AI Art Style Transfer Platform</span>
+            <div class="project-description">Upload photo, select style (South Park, anime, watercolor, pixel art) or custom prompt, adjust transformation strength. Built before ChatGPT image gen.</div>
+            <div class="project-meta"><a href="https://www.styleshift.art">styleshift.art</a> • <span class="status-paused">Paused</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">ReelSense</span> <span class="project-tagline">— Cliff Notes for Cinema</span>
+            <div class="project-description">AI-powered 11-section film analysis: themes, symbolism, character psychology, director intentions. Converts to professional audio narration via OpenAI TTS-1-HD.</div>
+            <div class="project-meta"><a href="https://reelsense.guru">reelsense.guru</a> • <span class="status-paused">Paused</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">Prism</span> <span class="project-tagline">— AI Social Media Content Transformer</span>
+            <div class="project-description">Paste any post → select tone → AI rewrites with statistical context to sound human and unbiased. Engineered to maximize Reddit karma.</div>
+            <div class="project-meta"><span class="status-paused">Paused</span></div>
+        </div>
+
+        <!-- AI HEALTHTECH -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI HealthTech</h3>
+        
+        <div class="project">
+            <span class="project-name">DNAI</span> <span class="project-tagline">— AI Genome Analysis Platform</span>
+            <div class="project-description">Upload genome files → AI analysis: variant detection with ACMG classification, polygenic disease risk scores, pharmacogenomics, longevity projections, clinical trial matching.</div>
+            <div class="project-insight">The kind of genomic + clinical trial matching infrastructure VC-backed healthtech startups raise $10M+ to build.</div>
+            <div class="project-meta"><a href="https://dnai.space">dnai.space</a> • <span class="status-live">Live</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">MindfulAI</span> <span class="project-tagline">— AI Therapy Platform</span>
+            <div class="project-description">Three AI therapeutic personas: Clinical Therapist (DSM-5), Analyst (psychodynamic), Behavioral Therapist (CBT/DBT). Voice recording, spoken responses, session history.</div>
+            <div class="project-insight">Democratizing mental health access. Therapy is $150-300/hour with 6-week waitlists.</div>
+            <div class="project-meta"><a href="https://www.mindfulai.life">mindfulai.life</a> • <span class="status-live">Live</span></div>
+        </div>
+
+        <!-- AI TRUST & VERIFICATION -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI Trust & Verification</h3>
+        
+        <div class="project">
+            <span class="project-name">NeuralScan</span> <span class="project-tagline">— AI vs AI: Synthetic Media Detection Platform</span>
+            <div class="project-description">Proprietary multi-expert forensic system for detecting AI-generated images and videos. Five specialized neural engines analyze anatomy inconsistencies, physics violations, texture artifacts, compression signatures, and stylistic fingerprints in parallel — delivering confidence-weighted verdicts with explainable evidence chains. Enterprise API for content platforms, newsrooms, and trust & safety teams.</div>
+            <div class="project-insight">The arms race between generative AI and detection is the defining cybersecurity challenge of the decade. Platforms will pay enterprise rates to avoid becoming misinformation vectors — this is infrastructure for the post-deepfake internet.</div>
+            <div class="project-meta"><a href="https://neuralscan.icu">neuralscan.icu</a> • <span class="status-live">Live</span></div>
+        </div>
+
+        <!-- AI CYBERSECURITY -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI Cybersecurity</h3>
+        
+        <div class="project">
+            <span class="project-name">ZeroDayAI</span> <span class="project-tagline">— AI Cybersecurity Scanner</span>
+            <div class="project-description">Comprehensive web vulnerability assessments: SSL/TLS, HTTP headers, injection vulnerabilities, hidden endpoints. Bug bounty integration with HackerOne/Bugcrowd/Synack payout estimates. Windows 95 aesthetic.</div>
+            <div class="project-insight">Enterprise security tooling at consumer prices. Bug bounty hunters pay $400+/year for tools like this.</div>
+            <div class="project-meta"><a href="https://zerodayai.today">zerodayai.today</a> • <span class="status-live">Live</span></div>
+        </div>
+
+        <!-- AI HR & FINTECH -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI HR & FinTech</h3>
+        
+        <div class="project">
+            <span class="project-name">TalentFlux</span> <span class="project-tagline">— AI Digital Recruiter Platform</span>
+            <div class="project-description">Paste LinkedIn URL → scrapes profile → AI analyzes experience, skills, employer history → generates scores and hiring recommendations. Trained on OpenAI/Anthropic employee career data.</div>
+            <div class="project-insight">Training data from elite AI companies is a moat no competitor can easily replicate.</div>
+            <div class="project-meta"><span class="status-paused">Paused</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">VentureProof</span> <span class="project-tagline">— AI Pitch Deck Due Diligence for VCs</span>
+            <div class="project-description">Upload pitch decks → AI-generated assessments with objective scoring, risk detection, strengths/weaknesses in seconds. Approval workflows, investor sharing.</div>
+            <div class="project-insight">Replaces the junior analyst doing first-pass deck reviews.</div>
+            <div class="project-meta"><a href="https://venture-scout.vercel.app">venture-scout.vercel.app</a> • <span class="status-pending">Pending</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">AI Serpent</span> <span class="project-tagline">— SEO Blog Generator with Stripe Paywall</span>
+            <div class="project-description">Enter keyword → analyzes SERP data → generates SEO-optimized long-form article with structured data, meta tags, FAQs. Monetized via Stripe subscription.</div>
+            <div class="project-meta"><a href="https://aiserpent.xyz">aiserpent.xyz</a> • <span class="status-paused">Paused</span></div>
+        </div>
+
+        <!-- AI MARKETING & SEO -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI Marketing & SEO</h3>
+        
+        <div class="project">
+            <span class="project-name">SEO Audit Pro</span> <span class="project-tagline">— AI-Powered Website Audit Platform</span>
+            <div class="project-description">Enter URL → comprehensive multi-category audit: SEO, Performance, Security, Accessibility, AI Readiness, Social. Powered by Lighthouse + OpenAI.</div>
+            <div class="project-meta"><a href="https://digital-seo-audit.vercel.app">digital-seo-audit.vercel.app</a> • <span class="status-paused">Paused</span></div>
+        </div>
+
+        <!-- BLOCKCHAIN & WEB3 -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Blockchain & Web3</h3>
+        
+        <div class="project">
+            <span class="project-name">Tokenomics Engine</span> <span class="project-tagline">— Multi-Provider AI Orchestration & Simulation</span>
+            <div class="project-description">Institutional-grade tokenomics analysis with multi-model AI (GPT-4 Turbo, Claude 3, Gemini Pro). Intelligent routing with fallback/parallel/consensus strategies. Deterministic vesting modeling.</div>
+            <div class="project-insight">The infrastructure layer crypto treasuries need to model $100M+ token dynamics.</div>
+            <div class="project-meta"><span class="status-pending">Pending</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">CryptoSlots</span> <span class="project-tagline">— Provably Fair Solana Casino</span>
+            <div class="project-description">On-chain provably fair slot machine. Connect Phantom wallet, place bets (0.1-10 SOL), spin with on-chain verification. Dark cyberpunk UI. Mobile-friendly.</div>
+            <div class="project-meta"><a href="https://phantom-spin-wins.vercel.app">phantom-spin-wins.vercel.app</a> • <span class="status-paused">Paused</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">Spores Network</span> <span class="project-tagline">— Web3 Launchpad & Accelerator (Client)</span>
+            <div class="project-description">#5 globally ranked Web3 launchpad. 200+ projects launched, $100M+ raised, 300K+ community. Elite Three.js 3D intro animation with floating spores.</div>
+            <div class="project-insight">Portfolio-defining frontend work with Three.js + React Three Fiber.</div>
+            <div class="project-meta"><a href="https://sporesnetwork.space">sporesnetwork.space</a> • <span class="status-live">Live</span></div>
+        </div>
+
+        <!-- CONSUMER APPS & ENTERTAINMENT -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Consumer Apps & Entertainment</h3>
+        
+        <div class="project">
+            <span class="project-name">Music Vision</span> <span class="project-tagline">— 24/7 Synchronized Music Video Broadcast</span>
+            <div class="project-description">Cloud-based music channel where everyone watches together in real-time. Classic MTV reborn. Community-driven rotation, live chat, AI VJ, DJ mode, Sora ad support.</div>
+            <div class="project-insight">Synchronized shared viewing is a format Netflix, Spotify, and TikTok have all tried and failed to nail.</div>
+            <div class="project-meta"><a href="https://musicvision.online">musicvision.online</a> • <span class="status-live">Live</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">PopcornPicks</span> <span class="project-tagline">— AI Movie Discovery Platform</span>
+            <div class="project-description">Stop scrolling for something to watch. Scrapes newest releases, ranks trending movies, delivers personalized recommendations based on profile.</div>
+            <div class="project-meta"><a href="https://www.popcornpicks.xyz">popcornpicks.xyz</a> • <span class="status-paused">Paused</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">Mystic Tarot</span> <span class="project-tagline">— AI Tarot Reading Platform</span>
+            <div class="project-description">3-card spreads with cryptographically random selection. Save readings, share via unique URLs. Stunning mystical UI.</div>
+            <div class="project-meta"><a href="https://mystictarot.life">mystictarot.life</a> • <span class="status-live">Live</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">TrialTracker</span> <span class="project-tagline">— Real-Time Court Case Coverage Platform</span>
+            <div class="project-description">Modular live trial coverage: real-time updates, timeline tracking, legal analysis aggregation. Swappable to any high-profile case.</div>
+            <div class="project-insight">Infrastructure that can spin up viral coverage for any major trial in hours.</div>
+            <div class="project-meta"><span class="status-paused">Paused</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">MeowBook</span> <span class="project-tagline">— Facebook for Cats</span>
+            <div class="project-description">Full social network replica: profiles, news feed, friend requests, DMs, reactions, comments, photo sharing — everything Facebook has, but for cats.</div>
+            <div class="project-insight">A technical flex disguised as a joke. Proves ability to replicate complex social platform architecture.</div>
+            <div class="project-meta"><a href="https://meow-book-social-felines.vercel.app">meow-book-social-felines.vercel.app</a> • <span class="status-paused">Paused</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">Switchcast</span> <span class="project-tagline">— Custom Sports Audio Streaming</span>
+            <div class="project-description">Strip commentary and ads from live sports streams → inject custom narration from podcasts. Choose your narrator. ESPN-inspired UI with glitch effects.</div>
+            <div class="project-insight">The unbundling of sports media. Licensing deals with podcasters + sports networks = massive revenue potential.</div>
+            <div class="project-meta"><a href="https://audio-override.vercel.app">audio-override.vercel.app</a> • <span class="status-progress">In Progress</span></div>
+        </div>
+
+        <!-- MOBILE & BROWSER EXTENSIONS -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Mobile & Browser Extensions (Published)</h3>
+        
+        <div class="project">
+            <span class="project-name">Lovers</span> <span class="project-tagline">— Apple Watch Proximity App</span>
+            <div class="project-description">Real-time proximity tracking for couples. Anonymous pairing code — no accounts. Live distance display, haptic feedback at thresholds. Privacy-first. Published on App Store.</div>
+            <div class="project-insight">Published on the actual App Store. Most people never ship through Apple's review process.</div>
+            <div class="project-meta"><a href="https://apps.apple.com/us/app/lovers69/id6751810888">App Store</a> • <a href="https://knowyourlover.life">knowyourlover.life</a> • <span class="status-live">Live</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">NoBuffer</span> <span class="project-tagline">— Chrome Extension for Buffer-Free Streaming</span>
+            <div class="project-description">Real-time video stream monitoring that warns about buffering before it interrupts. Analyzes buffer health, throughput, quality degradation. 100% local processing. Published on Chrome Web Store.</div>
+            <div class="project-meta"><a href="https://chromewebstore.google.com/detail/nobuffertoday/cdnameniehoaajfeophfcadegnhfmcki">Chrome Web Store</a> • <a href="https://nobuffer.today">nobuffer.today</a> • <span class="status-live">Live</span></div>
+        </div>
+
+        <!-- EDTECH & LANGUAGE LEARNING -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">EdTech & Language Learning</h3>
+        
+        <div class="project">
+            <span class="project-name">ThaiWhisperer</span> <span class="project-tagline">— Voice-Powered Thai Language Learning</span>
+            <div class="project-description">Record yourself speaking Thai → AI transcribes and translates to verify pronunciation → save audio to profile for replay and practice.</div>
+            <div class="project-insight">Language learning is a $15B market. This solves the "am I saying it right?" problem Duolingo doesn't.</div>
+            <div class="project-meta"><a href="https://www.thaiwhisperer.life">thaiwhisperer.life</a> • <span class="status-paused">Paused</span></div>
+        </div>
+
+        <!-- TRAVEL & UTILITIES -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Travel & Utilities</h3>
+        
+        <div class="project">
+            <span class="project-name">ATM Buddy</span> <span class="project-tagline">— Community ATM Finder for Asia</span>
+            <div class="project-description">Find ATMs that accept international cards. Real-time status reports, verified machines. Crowd-sourced scam detection — users flag predatory ATMs with hidden fees or card-skimming.</div>
+            <div class="project-insight">Scam prevention turns utility into social good.</div>
+            <div class="project-meta"><a href="https://atm-buddy.vercel.app">atm-buddy.vercel.app</a> • <span class="status-progress">In Progress</span></div>
+        </div>
+
+        <!-- GOVTECH & CIVIC INFRASTRUCTURE -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">GovTech & Civic Infrastructure</h3>
+        
+        <div class="project">
+            <span class="project-name">Housing Authority Outreach</span> <span class="project-tagline">— Affordable Housing Management Platform</span>
+            <div class="project-description">Digital platform for housing authorities: application management, resident communications, staff workflows. AI-powered application analysis, Google Calendar/Sheets integration.</div>
+            <div class="project-insight">GovTech that actually ships. The kind of civic infrastructure modernization that wins government contracts.</div>
+            <div class="project-meta"><a href="https://housingauthorityoutreach.website">housingauthorityoutreach.website</a> • <span class="status-pending">Pending</span></div>
+        </div>
+
+        <!-- E-COMMERCE -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">E-Commerce</h3>
+        
+        <div class="project">
+            <span class="project-name">PawPrint Toys</span> <span class="project-tagline">— Custom Cat Toy E-Commerce</span>
+            <div class="project-description">Handmade cat toy marketplace with product browsing, filters, customization builder. Playful animated shopping experience. Full e-commerce with Stripe.</div>
+            <div class="project-insight">Full-stack e-commerce from scratch — proves ability to ship complete consumer products.</div>
+            <div class="project-meta"><a href="https://pawprints.world">pawprints.world</a> • <span class="status-progress">In Progress</span></div>
+        </div>
+
+        <!-- CLIENT WORK & FREELANCE -->
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Client Work & Freelance</h3>
+        
+        <div class="project">
+            <span class="project-name">Sherry's Taipei Bites</span> <span class="project-tagline">— Culinary Tour Landing Page</span>
+            <div class="project-description">Landing page for exclusive food tour business in Taipei. Local expert-led tours with About, Featured Tours, Testimonials, Contact. Fully responsive.</div>
+            <div class="project-meta"><a href="https://sherrys-taipei-bites.vercel.app">sherrys-taipei-bites.vercel.app</a> • <span class="status-live">Live</span></div>
+        </div>
+        
+        <div class="project">
+            <span class="project-name">Bangkok Bodega</span> <span class="project-tagline">— NYC Deli Pop-Up in Bangkok</span>
+            <div class="project-description">Marketing site for NYC-style deli sandwich pop-up bringing authentic bodega sandwiches to Bangkok. Hero, brand story, menu, team, location, reviews.</div>
+            <div class="project-insight">Not just building software — building businesses. From concept to brand to landing page to launch.</div>
+            <div class="project-meta"><a href="https://bangkokbodega.food">bangkokbodega.food</a> • <span class="status-live">Live</span></div>
+        </div>
+
     </div>
 </div>
-
 
 </body>
 </html>
