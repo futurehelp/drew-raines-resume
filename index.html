@@ -1,893 +1,861 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drew Raines - Resume</title>
+    <title>Drew Raines - Solutions Architect</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23667eea'/><stop offset='100%' stop-color='%23764ba2'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><circle cx='30' cy='35' r='6' fill='white'/><circle cx='70' cy='35' r='6' fill='white'/><circle cx='50' cy='65' r='6' fill='white'/><line x1='30' y1='35' x2='70' y2='35' stroke='white' stroke-width='3'/><line x1='30' y1='35' x2='50' y2='65' stroke='white' stroke-width='3'/><line x1='70' y1='35' x2='50' y2='65' stroke='white' stroke-width='3'/><circle cx='50' cy='50' r='8' fill='white' opacity='0.9'/></svg>">
+    
+    <!-- Open Graph / Social Share -->
+    <meta property="og:title" content="Drew Raines - Solutions Architect">
+    <meta property="og:description" content="36 shipped products across AI, Blockchain & Web3. Building the infrastructure layer for the agentic future.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Drew Raines - Solutions Architect">
+    <meta name="twitter:description" content="36 shipped products across AI, Blockchain & Web3.">
+    <meta name="twitter:image" content="/og-image.png">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap');
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #f5f5f5;
-        color: #333;
-        line-height: 1.6;
-    }
-    
-    .container {
-        max-width: 900px;
-        margin: 40px auto;
-        background: white;
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-    
-    .header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 60px 60px 40px;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .header::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 400px;
-        height: 400px;
-        background: rgba(255,255,255,0.05);
-        border-radius: 50%;
-        transform: translate(30%, -30%);
-    }
-    
-    .header h1 {
-        font-family: 'Oswald', sans-serif;
-        font-size: 48px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-        position: relative;
-        z-index: 1;
-    }
-    
-    .header .subtitle {
-        font-size: 16px;
-        font-weight: 300;
-        margin-bottom: 25px;
-        line-height: 1.5;
-        max-width: 700px;
-        position: relative;
-        z-index: 1;
-    }
-    
-    .contact-info {
-        font-size: 14px;
-        font-weight: 300;
-        position: relative;
-        z-index: 1;
-    }
-    
-    .content {
-        padding: 40px 60px 60px;
-    }
-    
-    .two-column {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 50px;
-    }
-    
-    .section-title {
-        font-family: 'Oswald', sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        margin-bottom: 25px;
-        padding-bottom: 10px;
-        border-bottom: 3px solid #667eea;
-        text-transform: uppercase;
-    }
-    
-    .job {
-        margin-bottom: 35px;
-    }
-    
-    .job-header {
-        margin-bottom: 12px;
-    }
-    
-    .job-title {
-        font-family: 'Oswald', sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 3px;
-    }
-    
-    .company {
-        color: #667eea;
-        font-weight: 500;
-        font-size: 15px;
-    }
-    
-    .job-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 12px;
-    }
-    
-    .dates {
-        font-size: 13px;
-        color: #666;
-        font-weight: 400;
-    }
-    
-    .job-description {
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 10px;
-        color: #555;
-    }
-    
-    .job ul {
-        margin-left: 20px;
-        margin-top: 10px;
-    }
-    
-    .job li {
-        font-size: 14px;
-        margin-bottom: 8px;
-        line-height: 1.5;
-        color: #555;
-    }
-    
-    .education-item {
-        margin-bottom: 20px;
-    }
-    
-    .degree {
-        font-family: 'Oswald', sans-serif;
-        font-size: 15px;
-        font-weight: 500;
-        margin-bottom: 3px;
-    }
-    
-    .school {
-        color: #667eea;
-        font-weight: 500;
-        font-size: 14px;
-    }
-    
-    .skills-section {
-        margin-bottom: 25px;
-    }
-    
-    .skills-category {
-        font-family: 'Oswald', sans-serif;
-        font-size: 12px;
-        font-weight: 500;
-        color: #764ba2;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin: 15px 0 8px 0;
-    }
-    
-    .skills-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    .skill-item {
-        background: #f8f9fa;
-        padding: 6px 10px;
-        border-radius: 4px;
-        font-size: 11px;
-        font-weight: 400;
-    }
-    
-    .cert-item {
-        background: #f8f9fa;
-        padding: 10px 15px;
-        margin-bottom: 10px;
-        border-radius: 4px;
-        font-size: 13px;
-        border-left: 3px solid #667eea;
-    }
-    
-    .publication {
-        margin-bottom: 15px;
-        font-size: 13px;
-        line-height: 1.5;
-        padding-left: 15px;
-        border-left: 2px solid #e0e0e0;
-    }
-    
-    .pub-authors {
-        color: #666;
-        font-weight: 400;
-    }
-    
-    .pub-title {
-        font-style: italic;
-        margin: 5px 0;
-    }
-    
-    .pub-journal {
-        color: #667eea;
-        font-weight: 500;
-    }
-    
-    .header a:hover {
-        background: rgba(255,255,255,0.25) !important;
-    }
-
-    .project {
-        margin-bottom: 18px;
-        padding-left: 15px;
-        border-left: 2px solid #e0e0e0;
-    }
-    
-    .project-name {
-        font-family: 'Oswald', sans-serif;
-        font-size: 15px;
-        font-weight: 500;
-        color: #667eea;
-    }
-    
-    .project-tagline {
-        font-size: 13px;
-        color: #333;
-        font-weight: 400;
-    }
-    
-    .project-description {
-        font-size: 13px;
-        color: #555;
-        margin: 4px 0;
-        line-height: 1.5;
-    }
-    
-    .project-insight {
-        font-size: 12px;
-        color: #764ba2;
-        font-style: italic;
-        margin: 4px 0;
-    }
-    
-    .project-meta {
-        font-size: 12px;
-        color: #888;
-    }
-    
-    .project-meta a {
-        color: #667eea;
-        text-decoration: none;
-    }
-    
-    .status-live { color: #16a34a; font-weight: 500; }
-    .status-progress { color: #d97706; font-weight: 500; }
-    .status-pending { color: #2563eb; font-weight: 500; }
-    .status-paused { color: #6b7280; font-weight: 500; }
-    
-    @media (max-width: 768px) {
-        .two-column {
-            grid-template-columns: 1fr;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
         }
         
         .container {
-            margin: 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
         
-        .header, .content {
-            padding: 30px;
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
         }
         
         .header h1 {
-            font-size: 36px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
         }
-    }
-</style>
+        
+        .header .subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 25px;
+            line-height: 1.5;
+            max-width: 700px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info {
+            font-size: 14px;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info a { color: white; text-decoration: none; }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .social-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: background 0.3s;
+            font-size: 13px;
+        }
+        
+        .social-link:hover { background: rgba(255,255,255,0.25); }
+        
+        .content { padding: 40px 60px 60px; }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+        
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            text-transform: uppercase;
+        }
+        
+        .job { margin-bottom: 35px; }
+        .job-header { margin-bottom: 12px; }
+        
+        .job-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        
+        .company {
+            color: #667eea;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        
+        .job-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .dates {
+            font-size: 13px;
+            color: #666;
+            font-weight: 400;
+        }
+        
+        .job-description {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .job ul { margin-left: 20px; margin-top: 10px; }
+        
+        .job li {
+            font-size: 14px;
+            margin-bottom: 8px;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        .education-item { margin-bottom: 20px; }
+        
+        .degree {
+            font-family: 'Oswald', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        
+        .school {
+            color: #667eea;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .skills-section { margin-bottom: 25px; }
+        
+        .skills-category {
+            font-family: 'Oswald', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            color: #764ba2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 15px 0 8px 0;
+        }
+        
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-item {
+            background: #f8f9fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 400;
+        }
+        
+        .cert-item {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .publication {
+            margin-bottom: 15px;
+            font-size: 13px;
+            line-height: 1.5;
+            padding-left: 15px;
+            border-left: 2px solid #e0e0e0;
+        }
+        
+        .pub-authors { color: #666; font-weight: 400; }
+        .pub-title { font-style: italic; margin: 5px 0; }
+        .pub-journal { color: #667eea; font-weight: 500; }
+        
+        .project {
+            margin-bottom: 18px;
+            padding-left: 15px;
+            border-left: 2px solid #e0e0e0;
+        }
+        
+        .project-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: #667eea;
+        }
+        
+        .project-tagline {
+            font-size: 13px;
+            color: #333;
+            font-weight: 400;
+        }
+        
+        .project-description {
+            font-size: 13px;
+            color: #555;
+            margin: 4px 0;
+            line-height: 1.5;
+        }
+        
+        .project-insight {
+            font-size: 12px;
+            color: #764ba2;
+            font-style: italic;
+            margin: 4px 0;
+        }
+        
+        .project-meta { font-size: 12px; color: #888; }
+        .project-meta a { color: #667eea; text-decoration: none; }
+        
+        .status-live { color: #16a34a; font-weight: 500; }
+        .status-progress { color: #d97706; font-weight: 500; }
+        .status-pending { color: #2563eb; font-weight: 500; }
+        .status-paused { color: #6b7280; font-weight: 500; }
+        
+        .category-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            color: #764ba2;
+            margin: 25px 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column { grid-template-columns: 1fr; }
+            .container { margin: 20px; }
+            .header, .content { padding: 30px; }
+            .header h1 { font-size: 36px; }
+            .social-links { flex-wrap: wrap; gap: 10px; }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>DREW RAINES</h1>
             <div class="subtitle">
-                Solutions Architect specializing in Blockchain and AI with a strong focus on Agentic Agents, LLMs, Web3, Smart Contracts, and Decentralized Systems
+                Solutions Architect specializing in Blockchain and AI with a strong focus on AI Agents, LLMs, Web3, Smart Contracts, and Decentralized Systems
             </div>
             <div class="contact-info">
-                <div style="margin-bottom: 12px;">347.746.9540 • <a href="mailto:drdrewraines@gmail.com" style="color: white; text-decoration: none;">drdrewraines@gmail.com</a> • Brooklyn, NY</div>
-                <div style="display: flex; gap: 20px; align-items: center;">
-                    <a href="https://www.linkedin.com/in/drew-raines-19831072/" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.15); padding: 6px 12px; border-radius: 20px; transition: background 0.3s;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                        <span style="font-size: 13px;">LinkedIn</span>
+                <div style="margin-bottom: 12px;">
+                    347.746.9540 • <a href="mailto:drdrewraines@gmail.com">drdrewraines@gmail.com</a> • Brooklyn, NY
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/drew-raines-19831072/" target="_blank" class="social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
                     </a>
-                    <a href="https://github.com/futurehelp" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.15); padding: 6px 12px; border-radius: 20px; transition: background 0.3s;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        <span style="font-size: 13px;">GitHub</span>
+                    <a href="https://github.com/futurehelp" target="_blank" class="social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
                     </a>
                 </div>
             </div>
         </div>
 
-    <div class="content">
-        <div class="two-column">
-            <div class="main-column">
-                <h2 class="section-title">Experience</h2>
+        <div class="content">
+            <div class="two-column">
+                <div class="main-column">
+                    <h2 class="section-title">Experience</h2>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Solutions Architect</div>
+                            <div class="job-meta">
+                                <div class="company">Weave Cloud</div>
+                                <div class="dates">June 2023 - Present</div>
+                            </div>
+                        </div>
+                        <div class="job-description">Weave is a Serverless Cloud Platform enabling developers to create AI Agents, DAG Workflows, and APIs using low-code edge compute functions</div>
+                        <ul>
+                            <li>Implemented web3 blockchain node integrations including Starknet ArgentX Wallet, Contract Declaration/Deployment, DeFi Llama, Chainlink Functions, Space and Time, Helius (Solana), and Solidity Compiler</li>
+                            <li>Developed Block Broadcast system enabling users to create apps and listen to on-chain emitted events</li>
+                            <li>Designed and implemented Tally AI algorithms for enhanced data processing</li>
+                            <li>Conducted R&D initiatives for emerging blockchain and AI technologies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Solutions Architect</div>
+                            <div class="job-meta">
+                                <div class="company">Just Peachy</div>
+                                <div class="dates">January 2023 - June 2023</div>
+                            </div>
+                        </div>
+                        <div class="job-description">Enterprise blockchain automation and AI agent platform</div>
+                        <ul>
+                            <li>Architected Digital Worker system with advanced memory and skill management capabilities</li>
+                            <li>Developed multi-tenant services for enterprise blockchain applications</li>
+                            <li>Presented working demo at ETH Denver 2023, showcasing automated NFT marketplace deployment across multiple blockchains</li>
+                            <li>Designed Orchestration Engine infrastructure for scalable operations</li>
+                            <li>Co-developed proprietary AI Agent system in Python</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Chief Executive Officer</div>
+                            <div class="job-meta">
+                                <div class="company">Boulevard.Social</div>
+                                <div class="dates">March 2022 - January 2023</div>
+                            </div>
+                        </div>
+                        <div class="job-description">Decentralized social media platform with token-gated features and NFT marketplace</div>
+                        <ul>
+                            <li>Built comprehensive infrastructure including Web3Auth integration for decentralized authentication</li>
+                            <li>Implemented token-gated memberships and pay-per-purchase functionality in truly decentralized ecosystem</li>
+                            <li>Developed NFT marketplace with gallery workflow for artists within user feeds</li>
+                            <li>Engineered AI server to facilitate content commerce and recommendations</li>
+                            <li>Created blockchain node listener and indexer to track transactions and deliver push notifications</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Chief Technology Officer</div>
+                            <div class="job-meta">
+                                <div class="company">Mad Oath</div>
+                                <div class="dates">April 2021 - March 2022</div>
+                            </div>
+                        </div>
+                        <div class="job-description">Web3 gaming studio developing blockchain-powered gaming experiences</div>
+                        <ul>
+                            <li>Led blockchain smart contract development for web3 gaming applications</li>
+                            <li>Developed proprietary BlockRunner (Node Listeners and Cached Blockchain Indexers) and CARVE Minting Engine</li>
+                            <li>Built NFT Dutch Auction Marketplace for the FireSky gaming platform</li>
+                            <li>Created NFT Utility layer on Terra Blockchain enabling ticket borrowing/lending with ownership verification</li>
+                            <li>Developed one of the first NFT Marketplaces on XRPL mainnet</li>
+                            <li>Architected multichain NFT minting infrastructure across Avalanche, Polygon, and Ethereum</li>
+                            <li>Managed all cybersecurity and smart contract auditing processes</li>
+                            <li>Organized multiple industry hackathons sponsored by the company</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Computer Science Instructor</div>
+                            <div class="job-meta">
+                                <div class="company">Tom's River Regional School District</div>
+                                <div class="dates">July 2020 - July 2024</div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Taught programming languages including HTML, CSS, JavaScript, Swift, and Python to junior high and high school students</li>
+                            <li>Introduced students to industry services such as WordPress and AWS</li>
+                            <li>Developed comprehensive curricula, lectures, projects, and assignments</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Chief Technology Officer</div>
+                            <div class="job-meta">
+                                <div class="company">Terminal Development</div>
+                                <div class="dates">February 2019 - July 2020</div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Directed all IT services including cybersecurity, web development, database architecture, and iOS development</li>
+                            <li>Designed and deployed multiple iOS applications: KeegansList (SXSW event aggregator), NextBlock (blockchain conference networking), Triple D Life (interactive restaurant mapping)</li>
+                            <li>Built backend systems using MySQL and PHP/Python for REST API endpoints</li>
+                            <li>Implemented AWS Lambda functions with API Gateways connecting to RDS instances</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-title">Lead Developer</div>
+                            <div class="job-meta">
+                                <div class="company">Cannin</div>
+                                <div class="dates">January 2018 - February 2019</div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Developed online investment monitoring tools for cannabis industry</li>
+                            <li>Created iOS application interfacing with existing web services</li>
+                            <li>Implemented stock quote functionality using Alpha Vantage API</li>
+                        </ul>
+                    </div>
+                    
+                    <h2 class="section-title" style="margin-top: 40px;">Publications</h2>
+                    
+                    <div class="publication">
+                        <div class="pub-authors">Zhang, Y., Raines, A., Flowers II, R. A.</div>
+                        <div class="pub-title">"Solvent-Dependent Chemoselectivities in Additions of β-Carbonyl Imines to Allyltrimethylsilane with CTAN."</div>
+                        <div class="pub-journal">The Journal of Organic Chemistry, 69(19): 6267-6272 (2004)</div>
+                    </div>
+                    
+                    <div class="publication">
+                        <div class="pub-authors">Zhang, Y., Raines, A., Flowers II, R. A.</div>
+                        <div class="pub-title">"Solvent-Dependent Chemoselectivities in Ce(IV)-Mediated Oxidative Coupling Reactions."</div>
+                        <div class="pub-journal">Organic Letters 5(13): 2363-2365 (2003)</div>
+                    </div>
+                </div>
                 
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Solutions Architect</div>
-                        <div class="job-meta">
-                            <div class="company">Weave Cloud</div>
-                            <div class="dates">June 2023 - Present</div>
+                <div class="sidebar">
+                    <h2 class="section-title">Education</h2>
+                    
+                    <div class="education-item">
+                        <div class="degree">MS in Molecular Pathology</div>
+                        <div class="school">Texas Tech University</div>
+                        <div class="dates">2011</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="degree">BS in Microbiology</div>
+                        <div class="school">Texas Tech University</div>
+                        <div class="dates">2010, Cum Laude</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="degree">BS in Chemistry</div>
+                        <div class="school">Texas Tech University</div>
+                        <div class="dates">2006, Cum Laude in Honor Studies</div>
+                    </div>
+                    
+                    <h2 class="section-title" style="margin-top: 35px;">Certifications</h2>
+                    <div class="cert-item">MB(ASCP)CM - Medical Technologist Certification</div>
+                    
+                    <h2 class="section-title" style="margin-top: 35px;">Technical Skills</h2>
+                    
+                    <div class="skills-section">
+                        <div class="skills-category">Languages</div>
+                        <div class="skills-grid">
+                            <div class="skill-item">TypeScript</div>
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">Solidity</div>
+                            <div class="skill-item">Rust</div>
+                            <div class="skill-item">Swift</div>
+                            <div class="skill-item">SQL</div>
+                        </div>
+                        
+                        <div class="skills-category">Frontend</div>
+                        <div class="skills-grid">
+                            <div class="skill-item">React</div>
+                            <div class="skill-item">Next.js</div>
+                            <div class="skill-item">Tailwind CSS</div>
+                            <div class="skill-item">Three.js</div>
+                            <div class="skill-item">Framer Motion</div>
+                            <div class="skill-item">React Three Fiber</div>
+                            <div class="skill-item">shadcn/ui</div>
+                            <div class="skill-item">Radix UI</div>
+                        </div>
+                        
+                        <div class="skills-category">Backend</div>
+                        <div class="skills-grid">
+                            <div class="skill-item">Node.js</div>
+                            <div class="skill-item">Express</div>
+                            <div class="skill-item">FastAPI</div>
+                            <div class="skill-item">Edge Functions</div>
+                            <div class="skill-item">Deno</div>
+                            <div class="skill-item">REST APIs</div>
+                            <div class="skill-item">SSE/WebSockets</div>
+                        </div>
+                        
+                        <div class="skills-category">AI / ML</div>
+                        <div class="skills-grid">
+                            <div class="skill-item">Claude API</div>
+                            <div class="skill-item">OpenAI API</div>
+                            <div class="skill-item">Gemini API</div>
+                            <div class="skill-item">MCP</div>
+                            <div class="skill-item">LLM Orchestration</div>
+                            <div class="skill-item">Multi-Agent Systems</div>
+                            <div class="skill-item">ElevenLabs</div>
+                            <div class="skill-item">Whisper</div>
+                            <div class="skill-item">TTS</div>
+                            <div class="skill-item">Stable Diffusion</div>
+                            <div class="skill-item">Replicate</div>
+                        </div>
+                        
+                        <div class="skills-category">Web3 / Blockchain</div>
+                        <div class="skills-grid">
+                            <div class="skill-item">Smart Contracts</div>
+                            <div class="skill-item">Web3.js</div>
+                            <div class="skill-item">Ethers.js</div>
+                            <div class="skill-item">Solana</div>
+                            <div class="skill-item">DeFi</div>
+                            <div class="skill-item">NFTs</div>
+                            <div class="skill-item">Token Vesting</div>
+                            <div class="skill-item">Multichain</div>
+                        </div>
+                        
+                        <div class="skills-category">Databases</div>
+                        <div class="skills-grid">
+                            <div class="skill-item">Supabase</div>
+                            <div class="skill-item">PostgreSQL</div>
+                            <div class="skill-item">MongoDB</div>
+                            <div class="skill-item">Redis</div>
+                            <div class="skill-item">Firebase</div>
+                            <div class="skill-item">RLS</div>
+                        </div>
+                        
+                        <div class="skills-category">Infrastructure</div>
+                        <div class="skills-grid">
+                            <div class="skill-item">AWS</div>
+                            <div class="skill-item">Vercel</div>
+                            <div class="skill-item">Railway</div>
+                            <div class="skill-item">Docker</div>
+                            <div class="skill-item">S3/CloudFront</div>
+                            <div class="skill-item">Lambda</div>
+                            <div class="skill-item">Hetzner</div>
+                        </div>
+                        
+                        <div class="skills-category">Media / Video</div>
+                        <div class="skills-grid">
+                            <div class="skill-item">FFmpeg</div>
+                            <div class="skill-item">HLS Streaming</div>
+                            <div class="skill-item">Web Audio API</div>
+                            <div class="skill-item">RecordRTC</div>
+                            <div class="skill-item">Sad Talker</div>
+                        </div>
+                        
+                        <div class="skills-category">Platforms</div>
+                        <div class="skills-grid">
+                            <div class="skill-item">Chrome Extensions</div>
+                            <div class="skill-item">watchOS</div>
+                            <div class="skill-item">iOS</div>
+                            <div class="skill-item">Stripe</div>
+                            <div class="skill-item">Google APIs</div>
                         </div>
                     </div>
-                    <div class="job-description">
-                        Weave is a Serverless Cloud Platform enabling developers to create AI Agents, DAG Workflows, and APIs using low-code edge compute functions
-                    </div>
-                    <ul>
-                        <li>Implemented web3 blockchain node integrations including Starknet ArgentX Wallet, Contract Declaration/Deployment, DeFi Llama, Chainlink Functions, Space and Time, Helius (Solana), and Solidity Compiler</li>
-                        <li>Developed Block Broadcast system enabling users to create apps and listen to on-chain emitted events</li>
-                        <li>Designed and implemented Tally AI algorithms for enhanced data processing</li>
-                        <li>Conducted R&D initiatives for emerging blockchain and AI technologies</li>
-                    </ul>
                 </div>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Solutions Architect</div>
-                        <div class="job-meta">
-                            <div class="company">Just Peachy</div>
-                            <div class="dates">January 2023 - June 2023</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        Enterprise blockchain automation and AI agent platform
-                    </div>
-                    <ul>
-                        <li>Architected Digital Worker system with advanced memory and skill management capabilities</li>
-                        <li>Developed multi-tenant services for enterprise blockchain applications</li>
-                        <li>Presented working demo at ETH Denver 2023, showcasing automated NFT marketplace deployment across multiple blockchains</li>
-                        <li>Designed Orchestration Engine infrastructure for scalable operations</li>
-                        <li>Co-developed proprietary AI Agent system in Python</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Chief Executive Officer</div>
-                        <div class="job-meta">
-                            <div class="company">Boulevard.Social</div>
-                            <div class="dates">March 2022 - January 2023</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        Decentralized social media platform with token-gated features and NFT marketplace
-                    </div>
-                    <ul>
-                        <li>Built comprehensive infrastructure including Web3Auth integration for decentralized authentication</li>
-                        <li>Implemented token-gated memberships and pay-per-purchase functionality in truly decentralized ecosystem</li>
-                        <li>Developed NFT marketplace with gallery workflow for artists within user feeds</li>
-                        <li>Engineered AI server to facilitate content commerce and recommendations</li>
-                        <li>Created blockchain node listener and indexer to track transactions and deliver push notifications</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Chief Technology Officer</div>
-                        <div class="job-meta">
-                            <div class="company">Mad Oath</div>
-                            <div class="dates">April 2021 - March 2022</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        Web3 gaming studio developing blockchain-powered gaming experiences
-                    </div>
-                    <ul>
-                        <li>Led blockchain smart contract development for web3 gaming applications</li>
-                        <li>Developed proprietary BlockRunner (Node Listeners and Cached Blockchain Indexers) and CARVE Minting Engine</li>
-                        <li>Built NFT Dutch Auction Marketplace for the FireSky gaming platform</li>
-                        <li>Created NFT Utility layer on Terra Blockchain enabling ticket borrowing/lending with ownership verification</li>
-                        <li>Developed one of the first NFT Marketplaces on XRPL mainnet</li>
-                        <li>Architected multichain NFT minting infrastructure across Avalanche, Polygon, and Ethereum</li>
-                        <li>Managed all cybersecurity and smart contract auditing processes</li>
-                        <li>Organized multiple industry hackathons sponsored by the company</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Computer Science Instructor</div>
-                        <div class="job-meta">
-                            <div class="company">Tom's River Regional School District</div>
-                            <div class="dates">July 2020 - July 2024</div>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>Taught programming languages including HTML, CSS, JavaScript, Swift, and Python to junior high and high school students</li>
-                        <li>Introduced students to industry services such as WordPress and AWS</li>
-                        <li>Developed comprehensive curricula, lectures, projects, and assignments</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Chief Technology Officer</div>
-                        <div class="job-meta">
-                            <div class="company">Terminal Development</div>
-                            <div class="dates">February 2019 - July 2020</div>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>Directed all IT services including cybersecurity, web development, database architecture, and iOS development</li>
-                        <li>Designed and deployed multiple iOS applications: KeegansList (SXSW event aggregator), NextBlock (blockchain conference networking), Triple D Life (interactive restaurant mapping)</li>
-                        <li>Built backend systems using MySQL and PHP/Python for REST API endpoints</li>
-                        <li>Implemented AWS Lambda functions with API Gateways connecting to RDS instances</li>
-                    </ul>
-                </div>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Lead Developer</div>
-                        <div class="job-meta">
-                            <div class="company">Cannin</div>
-                            <div class="dates">January 2018 - February 2019</div>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>Developed online investment monitoring tools for cannabis industry</li>
-                        <li>Created iOS application interfacing with existing web services</li>
-                        <li>Implemented stock quote functionality using Alpha Vantage API</li>
-                    </ul>
-                </div>
-                
-                <h2 class="section-title" style="margin-top: 40px;">Publications</h2>
-                
-                <div class="publication">
-                    <div class="pub-authors">Zhang, Y., Raines, A., Flowers II, R. A.</div>
-                    <div class="pub-title">"Solvent-Dependent Chemoselectivities in Additions of β-Carbonyl Imines to Allyltrimethylsilane with CTAN."</div>
-                    <div class="pub-journal">The Journal of Organic Chemistry, 69(19): 6267-6272 (2004)</div>
-                </div>
-                
-                <div class="publication">
-                    <div class="pub-authors">Zhang, Y., Raines, A., Flowers II, R. A.</div>
-                    <div class="pub-title">"Solvent-Dependent Chemoselectivities in Ce(IV)-Mediated Oxidative Coupling Reactions."</div>
-                    <div class="pub-journal">Organic Letters 5(13): 2363-2365 (2003)</div>
-                </div>
+            </div>
+
+            <!-- PROJECTS SECTION -->
+            <h2 class="section-title" style="margin-top: 50px;">Projects <span style="font-weight: 300; font-size: 16px; color: #666;">— 36 shipped (15 Live, 6 In Progress, 3 Pending, 12 Paused)</span></h2>
+
+            <h3 class="category-title">AI Infrastructure & Developer Tools</h3>
+            
+            <div class="project">
+                <span class="project-name">ChainLens</span> <span class="project-tagline">— AI Crypto Due Diligence Agent</span>
+                <div class="project-description">Institutional-grade crypto due diligence in seconds. Multi-agent AI performs parallel analysis: smart contract security, whitepaper legitimacy, tokenomics sustainability. Multi-chain (ETH, Base, Arbitrum, Polygon, Solana).</div>
+                <div class="project-insight">Replaces a $50K+ audit team. The infrastructure crypto funds pay six figures annually to access.</div>
+                <div class="project-meta"><a href="https://chainlens.space">chainlens.space</a> • <a href="https://github.com/futurehelp/chainlens">GitHub</a> • <span class="status-live">Live</span></div>
             </div>
             
-            <div class="sidebar">
-                <h2 class="section-title">Education</h2>
-                
-                <div class="education-item">
-                    <div class="degree">MS in Molecular Pathology</div>
-                    <div class="school">Texas Tech University</div>
-                    <div class="dates">2011</div>
-                </div>
-                
-                <div class="education-item">
-                    <div class="degree">BS in Microbiology</div>
-                    <div class="school">Texas Tech University</div>
-                    <div class="dates">2010, Cum Laude</div>
-                </div>
-                
-                <div class="education-item">
-                    <div class="degree">BS in Chemistry</div>
-                    <div class="school">Texas Tech University</div>
-                    <div class="dates">2006, Cum Laude in Honor Studies</div>
-                </div>
-                
-                <h2 class="section-title" style="margin-top: 35px;">Certifications</h2>
-                
-                <div class="cert-item">MB(ASCP)CM - Medical Technologist Certification</div>
-                
-                <h2 class="section-title" style="margin-top: 35px;">Technical Skills</h2>
-                
-                <div class="skills-section">
-                    <div class="skills-category">Languages</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">TypeScript</div>
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">Solidity</div>
-                        <div class="skill-item">Rust</div>
-                        <div class="skill-item">Swift</div>
-                        <div class="skill-item">SQL</div>
-                    </div>
-                    
-                    <div class="skills-category">Frontend</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">React</div>
-                        <div class="skill-item">Next.js</div>
-                        <div class="skill-item">Tailwind CSS</div>
-                        <div class="skill-item">Three.js</div>
-                        <div class="skill-item">Framer Motion</div>
-                        <div class="skill-item">React Three Fiber</div>
-                        <div class="skill-item">shadcn/ui</div>
-                        <div class="skill-item">Radix UI</div>
-                    </div>
-                    
-                    <div class="skills-category">Backend</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">Node.js</div>
-                        <div class="skill-item">Express</div>
-                        <div class="skill-item">FastAPI</div>
-                        <div class="skill-item">Edge Functions</div>
-                        <div class="skill-item">Deno</div>
-                        <div class="skill-item">REST APIs</div>
-                        <div class="skill-item">SSE/WebSockets</div>
-                    </div>
-                    
-                    <div class="skills-category">AI / ML</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">Claude API</div>
-                        <div class="skill-item">OpenAI API</div>
-                        <div class="skill-item">Gemini API</div>
-                        <div class="skill-item">MCP</div>
-                        <div class="skill-item">LLM Orchestration</div>
-                        <div class="skill-item">Multi-Agent Systems</div>
-                        <div class="skill-item">ElevenLabs</div>
-                        <div class="skill-item">Whisper</div>
-                        <div class="skill-item">TTS</div>
-                        <div class="skill-item">Stable Diffusion</div>
-                        <div class="skill-item">Replicate</div>
-                    </div>
-                    
-                    <div class="skills-category">Web3 / Blockchain</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">Smart Contracts</div>
-                        <div class="skill-item">Web3.js</div>
-                        <div class="skill-item">Ethers.js</div>
-                        <div class="skill-item">Solana</div>
-                        <div class="skill-item">DeFi</div>
-                        <div class="skill-item">NFTs</div>
-                        <div class="skill-item">Token Vesting</div>
-                        <div class="skill-item">Multichain</div>
-                    </div>
-                    
-                    <div class="skills-category">Databases</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">Supabase</div>
-                        <div class="skill-item">PostgreSQL</div>
-                        <div class="skill-item">MongoDB</div>
-                        <div class="skill-item">Redis</div>
-                        <div class="skill-item">Firebase</div>
-                        <div class="skill-item">RLS</div>
-                    </div>
-                    
-                    <div class="skills-category">Infrastructure</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">AWS</div>
-                        <div class="skill-item">Vercel</div>
-                        <div class="skill-item">Railway</div>
-                        <div class="skill-item">Docker</div>
-                        <div class="skill-item">S3/CloudFront</div>
-                        <div class="skill-item">Lambda</div>
-                        <div class="skill-item">Hetzner</div>
-                    </div>
-                    
-                    <div class="skills-category">Media / Video</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">FFmpeg</div>
-                        <div class="skill-item">HLS Streaming</div>
-                        <div class="skill-item">Web Audio API</div>
-                        <div class="skill-item">RecordRTC</div>
-                        <div class="skill-item">Sad Talker</div>
-                    </div>
-                    
-                    <div class="skills-category">Platforms</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">Chrome Extensions</div>
-                        <div class="skill-item">watchOS</div>
-                        <div class="skill-item">iOS</div>
-                        <div class="skill-item">Stripe</div>
-                        <div class="skill-item">Google APIs</div>
-                    </div>
-                </div>
+            <div class="project">
+                <span class="project-name">Toolsy</span> <span class="project-tagline">— MCP Marketplace & No-Code Builder</span>
+                <div class="project-description">Connect productivity tools to Claude AI via Model Context Protocol. AI Wizard generates MCP servers from natural language. Full marketplace to buy/sell MCP tools.</div>
+                <div class="project-insight">MCP is still early — building marketplace infrastructure now is like building Shopify apps in 2010.</div>
+                <div class="project-meta"><a href="https://toolsy.today">toolsy.today</a> • <span class="status-progress">In Progress</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">IntentOS</span> <span class="project-tagline">— AI-Powered Intent Automation Platform</span>
+                <div class="project-description">Define automation goals in natural language → deploy intelligent agents. Multiple agent types: monitor, executor, analyzer, scheduler. Agent memory for persistent context.</div>
+                <div class="project-insight">The operating system for AI agents. What Zapier would be if built with LLMs at the core.</div>
+                <div class="project-meta"><a href="https://intentos.world">intentos.world</a> • <span class="status-progress">In Progress</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">VoiceBot</span> <span class="project-tagline">— Instant AI Voice Expert</span>
+                <div class="project-description">Ask the most complicated question, get a casual expert-level answer in seconds. Real-time voice transcription → Claude processing → response.</div>
+                <div class="project-insight">Voice-first AI that turns anyone into an instant expert. The UX Siri and Alexa wish they had.</div>
+                <div class="project-meta"><a href="https://digital-voice-expert.vercel.app">digital-voice-expert.vercel.app</a> • <span class="status-live">Live</span></div>
+            </div>
+
+            <h3 class="category-title">AI Content & Generative Media</h3>
+            
+            <div class="project">
+                <span class="project-name">ThaigerWoodsKa</span> <span class="project-tagline">— Instagram Influencer AI Bot</span>
+                <div class="project-description">Full autonomous content pipeline: upload media → AI vision captions → ElevenLabs voiceover → Sad Talker animates celebrity faces with lip-sync → auto-posts to Instagram.</div>
+                <div class="project-insight">End-to-end AI content factory. The future of influencer marketing is autonomous.</div>
+                <div class="project-meta"><a href="https://www.instagram.com/imthaigerwoodska">instagram.com/imthaigerwoodska</a> • <span class="status-live">Live</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">Silk & Tears</span> <span class="project-tagline">— AI Short Film Generator</span>
+                <div class="project-description">Type a prompt → generates complete 5-scene video. Full pipeline: AI scriptwriting → scene generation → FFmpeg concatenation → S3 delivery. Pivoting to LA/NYC producer market.</div>
+                <div class="project-insight">Prompt-to-video with production pipeline is where the entire AI content industry is heading.</div>
+                <div class="project-meta"><a href="https://silkandtears.lol">silkandtears.lol</a> • <span class="status-live">Live</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">ReelPhysics</span> <span class="project-tagline">— AI Movie Physics Roaster</span>
+                <div class="project-description">Analyzes movies scene-by-scene, roasts impossible physics with actual formulas. 705+ movies analyzed. Currently used in a Junior High School physics curriculum.</div>
+                <div class="project-insight">Already deployed in school curriculum — that's product-market fit most EdTech startups never achieve.</div>
+                <div class="project-meta"><a href="https://reelphysics.lol">reelphysics.lol</a> • <a href="https://x.com/reelphysicsphd">Twitter</a> • <span class="status-live">Live</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">StyleShift</span> <span class="project-tagline">— AI Art Style Transfer Platform</span>
+                <div class="project-description">Upload photo, select style (South Park, anime, watercolor, pixel art) or custom prompt, adjust transformation strength. Built before ChatGPT image gen.</div>
+                <div class="project-meta"><a href="https://www.styleshift.art">styleshift.art</a> • <span class="status-paused">Paused</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">ReelSense</span> <span class="project-tagline">— Cliff Notes for Cinema</span>
+                <div class="project-description">AI-powered 11-section film analysis: themes, symbolism, character psychology, director intentions. Converts to professional audio narration via OpenAI TTS-1-HD.</div>
+                <div class="project-meta"><a href="https://reelsense.guru">reelsense.guru</a> • <span class="status-paused">Paused</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">Prism</span> <span class="project-tagline">— AI Social Media Content Transformer</span>
+                <div class="project-description">Paste any post → select tone → AI rewrites with statistical context to sound human and unbiased. Engineered to maximize Reddit karma.</div>
+                <div class="project-meta"><span class="status-paused">Paused</span></div>
+            </div>
+
+            <h3 class="category-title">AI HealthTech</h3>
+            
+            <div class="project">
+                <span class="project-name">DNAI</span> <span class="project-tagline">— AI Genome Analysis Platform</span>
+                <div class="project-description">Upload genome files → AI analysis: variant detection with ACMG classification, polygenic disease risk scores, pharmacogenomics, longevity projections, clinical trial matching.</div>
+                <div class="project-insight">The kind of genomic + clinical trial matching infrastructure VC-backed healthtech startups raise $10M+ to build.</div>
+                <div class="project-meta"><a href="https://dnai.space">dnai.space</a> • <span class="status-live">Live</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">MindfulAI</span> <span class="project-tagline">— AI Therapy Platform</span>
+                <div class="project-description">Three AI therapeutic personas: Clinical Therapist (DSM-5), Analyst (psychodynamic), Behavioral Therapist (CBT/DBT). Voice recording, spoken responses, session history.</div>
+                <div class="project-insight">Democratizing mental health access. Therapy is $150-300/hour with 6-week waitlists.</div>
+                <div class="project-meta"><a href="https://www.mindfulai.life">mindfulai.life</a> • <span class="status-live">Live</span></div>
+            </div>
+
+            <h3 class="category-title">AI Trust & Verification</h3>
+            
+            <div class="project">
+                <span class="project-name">NeuralScan</span> <span class="project-tagline">— AI vs AI: Synthetic Media Detection Platform</span>
+                <div class="project-description">Proprietary multi-expert forensic system for detecting AI-generated images and videos. Five specialized neural engines analyze anatomy inconsistencies, physics violations, texture artifacts, compression signatures, and stylistic fingerprints in parallel — delivering confidence-weighted verdicts with explainable evidence chains. Enterprise API for content platforms, newsrooms, and trust & safety teams.</div>
+                <div class="project-insight">The arms race between generative AI and detection is the defining cybersecurity challenge of the decade. Platforms will pay enterprise rates to avoid becoming misinformation vectors — this is infrastructure for the post-deepfake internet.</div>
+                <div class="project-meta"><a href="https://neuralscan.icu">neuralscan.icu</a> • <span class="status-live">Live</span></div>
+            </div>
+
+            <h3 class="category-title">AI Cybersecurity</h3>
+            
+            <div class="project">
+                <span class="project-name">ZeroDayAI</span> <span class="project-tagline">— AI Cybersecurity Scanner</span>
+                <div class="project-description">Comprehensive web vulnerability assessments: SSL/TLS, HTTP headers, injection vulnerabilities, hidden endpoints. Bug bounty integration with HackerOne/Bugcrowd/Synack payout estimates. Windows 95 aesthetic.</div>
+                <div class="project-insight">Enterprise security tooling at consumer prices. Bug bounty hunters pay $400+/year for tools like this.</div>
+                <div class="project-meta"><a href="https://zerodayai.today">zerodayai.today</a> • <span class="status-live">Live</span></div>
+            </div>
+
+            <h3 class="category-title">AI HR & FinTech</h3>
+            
+            <div class="project">
+                <span class="project-name">TalentFlux</span> <span class="project-tagline">— AI Digital Recruiter Platform</span>
+                <div class="project-description">Paste LinkedIn URL → scrapes profile → AI analyzes experience, skills, employer history → generates scores and hiring recommendations. Trained on OpenAI/Anthropic employee career data.</div>
+                <div class="project-insight">Training data from elite AI companies is a moat no competitor can easily replicate.</div>
+                <div class="project-meta"><span class="status-paused">Paused</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">VentureProof</span> <span class="project-tagline">— AI Pitch Deck Due Diligence for VCs</span>
+                <div class="project-description">Upload pitch decks → AI-generated assessments with objective scoring, risk detection, strengths/weaknesses in seconds. Approval workflows, investor sharing.</div>
+                <div class="project-insight">Replaces the junior analyst doing first-pass deck reviews.</div>
+                <div class="project-meta"><a href="https://venture-scout.vercel.app">venture-scout.vercel.app</a> • <span class="status-pending">Pending</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">AI Serpent</span> <span class="project-tagline">— SEO Blog Generator with Stripe Paywall</span>
+                <div class="project-description">Enter keyword → analyzes SERP data → generates SEO-optimized long-form article with structured data, meta tags, FAQs. Monetized via Stripe subscription.</div>
+                <div class="project-meta"><a href="https://aiserpent.xyz">aiserpent.xyz</a> • <span class="status-paused">Paused</span></div>
+            </div>
+
+            <h3 class="category-title">AI Marketing & SEO</h3>
+            
+            <div class="project">
+                <span class="project-name">SEO Audit Pro</span> <span class="project-tagline">— AI-Powered Website Audit Platform</span>
+                <div class="project-description">Enter URL → comprehensive multi-category audit: SEO, Performance, Security, Accessibility, AI Readiness, Social. Powered by Lighthouse + OpenAI.</div>
+                <div class="project-meta"><a href="https://digital-seo-audit.vercel.app">digital-seo-audit.vercel.app</a> • <span class="status-paused">Paused</span></div>
+            </div>
+
+            <h3 class="category-title">Blockchain & Web3</h3>
+            
+            <div class="project">
+                <span class="project-name">Tokenomics Engine</span> <span class="project-tagline">— Multi-Provider AI Orchestration & Simulation</span>
+                <div class="project-description">Institutional-grade tokenomics analysis with multi-model AI (GPT-4 Turbo, Claude 3, Gemini Pro). Intelligent routing with fallback/parallel/consensus strategies. Deterministic vesting modeling.</div>
+                <div class="project-insight">The infrastructure layer crypto treasuries need to model $100M+ token dynamics.</div>
+                <div class="project-meta"><span class="status-pending">Pending</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">CryptoSlots</span> <span class="project-tagline">— Provably Fair Solana Casino</span>
+                <div class="project-description">On-chain provably fair slot machine. Connect Phantom wallet, place bets (0.1-10 SOL), spin with on-chain verification. Dark cyberpunk UI. Mobile-friendly.</div>
+                <div class="project-meta"><a href="https://phantom-spin-wins.vercel.app">phantom-spin-wins.vercel.app</a> • <span class="status-paused">Paused</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">Spores Network</span> <span class="project-tagline">— Web3 Launchpad & Accelerator (Client)</span>
+                <div class="project-description">#5 globally ranked Web3 launchpad. 200+ projects launched, $100M+ raised, 300K+ community. Elite Three.js 3D intro animation with floating spores.</div>
+                <div class="project-insight">Portfolio-defining frontend work with Three.js + React Three Fiber.</div>
+                <div class="project-meta"><a href="https://sporesnetwork.space">sporesnetwork.space</a> • <span class="status-live">Live</span></div>
+            </div>
+
+            <h3 class="category-title">Consumer Apps & Entertainment</h3>
+            
+            <div class="project">
+                <span class="project-name">Music Vision</span> <span class="project-tagline">— 24/7 Synchronized Music Video Broadcast</span>
+                <div class="project-description">Cloud-based music channel where everyone watches together in real-time. Classic MTV reborn. Community-driven rotation, live chat, AI VJ, DJ mode, Sora ad support.</div>
+                <div class="project-insight">Synchronized shared viewing is a format Netflix, Spotify, and TikTok have all tried and failed to nail.</div>
+                <div class="project-meta"><a href="https://musicvision.online">musicvision.online</a> • <span class="status-live">Live</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">PopcornPicks</span> <span class="project-tagline">— AI Movie Discovery Platform</span>
+                <div class="project-description">Stop scrolling for something to watch. Scrapes newest releases, ranks trending movies, delivers personalized recommendations based on profile.</div>
+                <div class="project-meta"><a href="https://www.popcornpicks.xyz">popcornpicks.xyz</a> • <span class="status-paused">Paused</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">Mystic Tarot</span> <span class="project-tagline">— AI Tarot Reading Platform</span>
+                <div class="project-description">3-card spreads with cryptographically random selection. Save readings, share via unique URLs. Stunning mystical UI.</div>
+                <div class="project-meta"><a href="https://mystictarot.life">mystictarot.life</a> • <span class="status-live">Live</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">TrialTracker</span> <span class="project-tagline">— Real-Time Court Case Coverage Platform</span>
+                <div class="project-description">Modular live trial coverage: real-time updates, timeline tracking, legal analysis aggregation. Swappable to any high-profile case.</div>
+                <div class="project-insight">Infrastructure that can spin up viral coverage for any major trial in hours.</div>
+                <div class="project-meta"><span class="status-paused">Paused</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">MeowBook</span> <span class="project-tagline">— Facebook for Cats</span>
+                <div class="project-description">Full social network replica: profiles, news feed, friend requests, DMs, reactions, comments, photo sharing — everything Facebook has, but for cats.</div>
+                <div class="project-insight">A technical flex disguised as a joke. Proves ability to replicate complex social platform architecture.</div>
+                <div class="project-meta"><a href="https://meow-book-social-felines.vercel.app">meow-book-social-felines.vercel.app</a> • <span class="status-paused">Paused</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">Switchcast</span> <span class="project-tagline">— Custom Sports Audio Streaming</span>
+                <div class="project-description">Strip commentary and ads from live sports streams → inject custom narration from podcasts. Choose your narrator. ESPN-inspired UI with glitch effects.</div>
+                <div class="project-insight">The unbundling of sports media. Licensing deals with podcasters + sports networks = massive revenue potential.</div>
+                <div class="project-meta"><a href="https://audio-override.vercel.app">audio-override.vercel.app</a> • <span class="status-progress">In Progress</span></div>
+            </div>
+
+            <h3 class="category-title">Mobile & Browser Extensions (Published)</h3>
+            
+            <div class="project">
+                <span class="project-name">Lovers</span> <span class="project-tagline">— Apple Watch Proximity App</span>
+                <div class="project-description">Real-time proximity tracking for couples. Anonymous pairing code — no accounts. Live distance display, haptic feedback at thresholds. Privacy-first. Published on App Store.</div>
+                <div class="project-insight">Published on the actual App Store. Most people never ship through Apple's review process.</div>
+                <div class="project-meta"><a href="https://apps.apple.com/us/app/lovers69/id6751810888">App Store</a> • <a href="https://knowyourlover.life">knowyourlover.life</a> • <span class="status-live">Live</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">NoBuffer</span> <span class="project-tagline">— Chrome Extension for Buffer-Free Streaming</span>
+                <div class="project-description">Real-time video stream monitoring that warns about buffering before it interrupts. Analyzes buffer health, throughput, quality degradation. 100% local processing. Published on Chrome Web Store.</div>
+                <div class="project-meta"><a href="https://chromewebstore.google.com/detail/nobuffertoday/cdnameniehoaajfeophfcadegnhfmcki">Chrome Web Store</a> • <a href="https://nobuffer.today">nobuffer.today</a> • <span class="status-live">Live</span></div>
+            </div>
+
+            <h3 class="category-title">EdTech & Language Learning</h3>
+            
+            <div class="project">
+                <span class="project-name">ThaiWhisperer</span> <span class="project-tagline">— Voice-Powered Thai Language Learning</span>
+                <div class="project-description">Record yourself speaking Thai → AI transcribes and translates to verify pronunciation → save audio to profile for replay and practice.</div>
+                <div class="project-insight">Language learning is a $15B market. This solves the "am I saying it right?" problem Duolingo doesn't.</div>
+                <div class="project-meta"><a href="https://www.thaiwhisperer.life">thaiwhisperer.life</a> • <span class="status-paused">Paused</span></div>
+            </div>
+
+            <h3 class="category-title">Travel & Utilities</h3>
+            
+            <div class="project">
+                <span class="project-name">ATM Buddy</span> <span class="project-tagline">— Community ATM Finder for Asia</span>
+                <div class="project-description">Find ATMs that accept international cards. Real-time status reports, verified machines. Crowd-sourced scam detection — users flag predatory ATMs with hidden fees or card-skimming.</div>
+                <div class="project-insight">Scam prevention turns utility into social good.</div>
+                <div class="project-meta"><a href="https://atm-buddy.vercel.app">atm-buddy.vercel.app</a> • <span class="status-progress">In Progress</span></div>
+            </div>
+
+            <h3 class="category-title">GovTech & Civic Infrastructure</h3>
+            
+            <div class="project">
+                <span class="project-name">Housing Authority Outreach</span> <span class="project-tagline">— Affordable Housing Management Platform</span>
+                <div class="project-description">Digital platform for housing authorities: application management, resident communications, staff workflows. AI-powered application analysis, Google Calendar/Sheets integration.</div>
+                <div class="project-insight">GovTech that actually ships. The kind of civic infrastructure modernization that wins government contracts.</div>
+                <div class="project-meta"><a href="https://housingauthorityoutreach.website">housingauthorityoutreach.website</a> • <span class="status-pending">Pending</span></div>
+            </div>
+
+            <h3 class="category-title">E-Commerce</h3>
+            
+            <div class="project">
+                <span class="project-name">PawPrint Toys</span> <span class="project-tagline">— Custom Cat Toy E-Commerce</span>
+                <div class="project-description">Handmade cat toy marketplace with product browsing, filters, customization builder. Playful animated shopping experience. Full e-commerce with Stripe.</div>
+                <div class="project-insight">Full-stack e-commerce from scratch — proves ability to ship complete consumer products.</div>
+                <div class="project-meta"><a href="https://pawprints.world">pawprints.world</a> • <span class="status-progress">In Progress</span></div>
+            </div>
+
+            <h3 class="category-title">Client Work & Freelance</h3>
+            
+            <div class="project">
+                <span class="project-name">Sherry's Taipei Bites</span> <span class="project-tagline">— Culinary Tour Landing Page</span>
+                <div class="project-description">Landing page for exclusive food tour business in Taipei. Local expert-led tours with About, Featured Tours, Testimonials, Contact. Fully responsive.</div>
+                <div class="project-meta"><a href="https://sherrys-taipei-bites.vercel.app">sherrys-taipei-bites.vercel.app</a> • <span class="status-live">Live</span></div>
+            </div>
+            
+            <div class="project">
+                <span class="project-name">Bangkok Bodega</span> <span class="project-tagline">— NYC Deli Pop-Up in Bangkok</span>
+                <div class="project-description">Marketing site for NYC-style deli sandwich pop-up bringing authentic bodega sandwiches to Bangkok. Hero, brand story, menu, team, location, reviews.</div>
+                <div class="project-insight">Not just building software — building businesses. From concept to brand to landing page to launch.</div>
+                <div class="project-meta"><a href="https://bangkokbodega.food">bangkokbodega.food</a> • <span class="status-live">Live</span></div>
             </div>
         </div>
-
-        <!-- PROJECTS SECTION -->
-        <h2 class="section-title" style="margin-top: 50px;">Projects <span style="font-weight: 300; font-size: 16px; color: #666;">— 36 shipped (15 Live, 6 In Progress, 3 Pending, 12 Paused)</span></h2>
-
-        <!-- AI INFRASTRUCTURE & DEVELOPER TOOLS -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI Infrastructure & Developer Tools</h3>
-        
-        <div class="project">
-            <span class="project-name">ChainLens</span> <span class="project-tagline">— AI Crypto Due Diligence Agent</span>
-            <div class="project-description">Institutional-grade crypto due diligence in seconds. Multi-agent AI performs parallel analysis: smart contract security, whitepaper legitimacy, tokenomics sustainability. Multi-chain (ETH, Base, Arbitrum, Polygon, Solana).</div>
-            <div class="project-insight">Replaces a $50K+ audit team. The infrastructure crypto funds pay six figures annually to access.</div>
-            <div class="project-meta"><a href="https://chainlens.space">chainlens.space</a> • <a href="https://github.com/futurehelp/chainlens">GitHub</a> • <span class="status-live">Live</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">Toolsy</span> <span class="project-tagline">— MCP Marketplace & No-Code Builder</span>
-            <div class="project-description">Connect productivity tools to Claude AI via Model Context Protocol. AI Wizard generates MCP servers from natural language. Full marketplace to buy/sell MCP tools.</div>
-            <div class="project-insight">MCP is still early — building marketplace infrastructure now is like building Shopify apps in 2010.</div>
-            <div class="project-meta"><a href="https://toolsy.today">toolsy.today</a> • <span class="status-progress">In Progress</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">IntentOS</span> <span class="project-tagline">— AI-Powered Intent Automation Platform</span>
-            <div class="project-description">Define automation goals in natural language → deploy intelligent agents. Multiple agent types: monitor, executor, analyzer, scheduler. Agent memory for persistent context.</div>
-            <div class="project-insight">The operating system for AI agents. What Zapier would be if built with LLMs at the core.</div>
-            <div class="project-meta"><a href="https://intentos.world">intentos.world</a> • <span class="status-progress">In Progress</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">VoiceBot</span> <span class="project-tagline">— Instant AI Voice Expert</span>
-            <div class="project-description">Ask the most complicated question, get a casual expert-level answer in seconds. Real-time voice transcription → Claude processing → response.</div>
-            <div class="project-insight">Voice-first AI that turns anyone into an instant expert. The UX Siri and Alexa wish they had.</div>
-            <div class="project-meta"><a href="https://digital-voice-expert.vercel.app">digital-voice-expert.vercel.app</a> • <span class="status-live">Live</span></div>
-        </div>
-
-        <!-- AI CONTENT & GENERATIVE MEDIA -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI Content & Generative Media</h3>
-        
-        <div class="project">
-            <span class="project-name">ThaigerWoodsKa</span> <span class="project-tagline">— Instagram Influencer AI Bot</span>
-            <div class="project-description">Full autonomous content pipeline: upload media → AI vision captions → ElevenLabs voiceover → Sad Talker animates celebrity faces with lip-sync → auto-posts to Instagram.</div>
-            <div class="project-insight">End-to-end AI content factory. The future of influencer marketing is autonomous.</div>
-            <div class="project-meta"><a href="https://www.instagram.com/imthaigerwoodska">instagram.com/imthaigerwoodska</a> • <span class="status-live">Live</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">Silk & Tears</span> <span class="project-tagline">— AI Short Film Generator</span>
-            <div class="project-description">Type a prompt → generates complete 5-scene video. Full pipeline: AI scriptwriting → scene generation → FFmpeg concatenation → S3 delivery. Pivoting to LA/NYC producer market.</div>
-            <div class="project-insight">Prompt-to-video with production pipeline is where the entire AI content industry is heading.</div>
-            <div class="project-meta"><a href="https://silkandtears.lol">silkandtears.lol</a> • <span class="status-live">Live</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">ReelPhysics</span> <span class="project-tagline">— AI Movie Physics Roaster</span>
-            <div class="project-description">Analyzes movies scene-by-scene, roasts impossible physics with actual formulas. 705+ movies analyzed. Currently used in a Junior High School physics curriculum.</div>
-            <div class="project-insight">Already deployed in school curriculum — that's product-market fit most EdTech startups never achieve.</div>
-            <div class="project-meta"><a href="https://reelphysics.lol">reelphysics.lol</a> • <a href="https://x.com/reelphysicsphd">Twitter</a> • <span class="status-live">Live</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">StyleShift</span> <span class="project-tagline">— AI Art Style Transfer Platform</span>
-            <div class="project-description">Upload photo, select style (South Park, anime, watercolor, pixel art) or custom prompt, adjust transformation strength. Built before ChatGPT image gen.</div>
-            <div class="project-meta"><a href="https://www.styleshift.art">styleshift.art</a> • <span class="status-paused">Paused</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">ReelSense</span> <span class="project-tagline">— Cliff Notes for Cinema</span>
-            <div class="project-description">AI-powered 11-section film analysis: themes, symbolism, character psychology, director intentions. Converts to professional audio narration via OpenAI TTS-1-HD.</div>
-            <div class="project-meta"><a href="https://reelsense.guru">reelsense.guru</a> • <span class="status-paused">Paused</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">Prism</span> <span class="project-tagline">— AI Social Media Content Transformer</span>
-            <div class="project-description">Paste any post → select tone → AI rewrites with statistical context to sound human and unbiased. Engineered to maximize Reddit karma.</div>
-            <div class="project-meta"><span class="status-paused">Paused</span></div>
-        </div>
-
-        <!-- AI HEALTHTECH -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI HealthTech</h3>
-        
-        <div class="project">
-            <span class="project-name">DNAI</span> <span class="project-tagline">— AI Genome Analysis Platform</span>
-            <div class="project-description">Upload genome files → AI analysis: variant detection with ACMG classification, polygenic disease risk scores, pharmacogenomics, longevity projections, clinical trial matching.</div>
-            <div class="project-insight">The kind of genomic + clinical trial matching infrastructure VC-backed healthtech startups raise $10M+ to build.</div>
-            <div class="project-meta"><a href="https://dnai.space">dnai.space</a> • <span class="status-live">Live</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">MindfulAI</span> <span class="project-tagline">— AI Therapy Platform</span>
-            <div class="project-description">Three AI therapeutic personas: Clinical Therapist (DSM-5), Analyst (psychodynamic), Behavioral Therapist (CBT/DBT). Voice recording, spoken responses, session history.</div>
-            <div class="project-insight">Democratizing mental health access. Therapy is $150-300/hour with 6-week waitlists.</div>
-            <div class="project-meta"><a href="https://www.mindfulai.life">mindfulai.life</a> • <span class="status-live">Live</span></div>
-        </div>
-
-        <!-- AI TRUST & VERIFICATION -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI Trust & Verification</h3>
-        
-        <div class="project">
-            <span class="project-name">NeuralScan</span> <span class="project-tagline">— AI vs AI: Synthetic Media Detection Platform</span>
-            <div class="project-description">Proprietary multi-expert forensic system for detecting AI-generated images and videos. Five specialized neural engines analyze anatomy inconsistencies, physics violations, texture artifacts, compression signatures, and stylistic fingerprints in parallel — delivering confidence-weighted verdicts with explainable evidence chains. Enterprise API for content platforms, newsrooms, and trust & safety teams.</div>
-            <div class="project-insight">The arms race between generative AI and detection is the defining cybersecurity challenge of the decade. Platforms will pay enterprise rates to avoid becoming misinformation vectors — this is infrastructure for the post-deepfake internet.</div>
-            <div class="project-meta"><a href="https://neuralscan.icu">neuralscan.icu</a> • <span class="status-live">Live</span></div>
-        </div>
-
-        <!-- AI CYBERSECURITY -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI Cybersecurity</h3>
-        
-        <div class="project">
-            <span class="project-name">ZeroDayAI</span> <span class="project-tagline">— AI Cybersecurity Scanner</span>
-            <div class="project-description">Comprehensive web vulnerability assessments: SSL/TLS, HTTP headers, injection vulnerabilities, hidden endpoints. Bug bounty integration with HackerOne/Bugcrowd/Synack payout estimates. Windows 95 aesthetic.</div>
-            <div class="project-insight">Enterprise security tooling at consumer prices. Bug bounty hunters pay $400+/year for tools like this.</div>
-            <div class="project-meta"><a href="https://zerodayai.today">zerodayai.today</a> • <span class="status-live">Live</span></div>
-        </div>
-
-        <!-- AI HR & FINTECH -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI HR & FinTech</h3>
-        
-        <div class="project">
-            <span class="project-name">TalentFlux</span> <span class="project-tagline">— AI Digital Recruiter Platform</span>
-            <div class="project-description">Paste LinkedIn URL → scrapes profile → AI analyzes experience, skills, employer history → generates scores and hiring recommendations. Trained on OpenAI/Anthropic employee career data.</div>
-            <div class="project-insight">Training data from elite AI companies is a moat no competitor can easily replicate.</div>
-            <div class="project-meta"><span class="status-paused">Paused</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">VentureProof</span> <span class="project-tagline">— AI Pitch Deck Due Diligence for VCs</span>
-            <div class="project-description">Upload pitch decks → AI-generated assessments with objective scoring, risk detection, strengths/weaknesses in seconds. Approval workflows, investor sharing.</div>
-            <div class="project-insight">Replaces the junior analyst doing first-pass deck reviews.</div>
-            <div class="project-meta"><a href="https://venture-scout.vercel.app">venture-scout.vercel.app</a> • <span class="status-pending">Pending</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">AI Serpent</span> <span class="project-tagline">— SEO Blog Generator with Stripe Paywall</span>
-            <div class="project-description">Enter keyword → analyzes SERP data → generates SEO-optimized long-form article with structured data, meta tags, FAQs. Monetized via Stripe subscription.</div>
-            <div class="project-meta"><a href="https://aiserpent.xyz">aiserpent.xyz</a> • <span class="status-paused">Paused</span></div>
-        </div>
-
-        <!-- AI MARKETING & SEO -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">AI Marketing & SEO</h3>
-        
-        <div class="project">
-            <span class="project-name">SEO Audit Pro</span> <span class="project-tagline">— AI-Powered Website Audit Platform</span>
-            <div class="project-description">Enter URL → comprehensive multi-category audit: SEO, Performance, Security, Accessibility, AI Readiness, Social. Powered by Lighthouse + OpenAI.</div>
-            <div class="project-meta"><a href="https://digital-seo-audit.vercel.app">digital-seo-audit.vercel.app</a> • <span class="status-paused">Paused</span></div>
-        </div>
-
-        <!-- BLOCKCHAIN & WEB3 -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Blockchain & Web3</h3>
-        
-        <div class="project">
-            <span class="project-name">Tokenomics Engine</span> <span class="project-tagline">— Multi-Provider AI Orchestration & Simulation</span>
-            <div class="project-description">Institutional-grade tokenomics analysis with multi-model AI (GPT-4 Turbo, Claude 3, Gemini Pro). Intelligent routing with fallback/parallel/consensus strategies. Deterministic vesting modeling.</div>
-            <div class="project-insight">The infrastructure layer crypto treasuries need to model $100M+ token dynamics.</div>
-            <div class="project-meta"><span class="status-pending">Pending</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">CryptoSlots</span> <span class="project-tagline">— Provably Fair Solana Casino</span>
-            <div class="project-description">On-chain provably fair slot machine. Connect Phantom wallet, place bets (0.1-10 SOL), spin with on-chain verification. Dark cyberpunk UI. Mobile-friendly.</div>
-            <div class="project-meta"><a href="https://phantom-spin-wins.vercel.app">phantom-spin-wins.vercel.app</a> • <span class="status-paused">Paused</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">Spores Network</span> <span class="project-tagline">— Web3 Launchpad & Accelerator (Client)</span>
-            <div class="project-description">#5 globally ranked Web3 launchpad. 200+ projects launched, $100M+ raised, 300K+ community. Elite Three.js 3D intro animation with floating spores.</div>
-            <div class="project-insight">Portfolio-defining frontend work with Three.js + React Three Fiber.</div>
-            <div class="project-meta"><a href="https://sporesnetwork.space">sporesnetwork.space</a> • <span class="status-live">Live</span></div>
-        </div>
-
-        <!-- CONSUMER APPS & ENTERTAINMENT -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Consumer Apps & Entertainment</h3>
-        
-        <div class="project">
-            <span class="project-name">Music Vision</span> <span class="project-tagline">— 24/7 Synchronized Music Video Broadcast</span>
-            <div class="project-description">Cloud-based music channel where everyone watches together in real-time. Classic MTV reborn. Community-driven rotation, live chat, AI VJ, DJ mode, Sora ad support.</div>
-            <div class="project-insight">Synchronized shared viewing is a format Netflix, Spotify, and TikTok have all tried and failed to nail.</div>
-            <div class="project-meta"><a href="https://musicvision.online">musicvision.online</a> • <span class="status-live">Live</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">PopcornPicks</span> <span class="project-tagline">— AI Movie Discovery Platform</span>
-            <div class="project-description">Stop scrolling for something to watch. Scrapes newest releases, ranks trending movies, delivers personalized recommendations based on profile.</div>
-            <div class="project-meta"><a href="https://www.popcornpicks.xyz">popcornpicks.xyz</a> • <span class="status-paused">Paused</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">Mystic Tarot</span> <span class="project-tagline">— AI Tarot Reading Platform</span>
-            <div class="project-description">3-card spreads with cryptographically random selection. Save readings, share via unique URLs. Stunning mystical UI.</div>
-            <div class="project-meta"><a href="https://mystictarot.life">mystictarot.life</a> • <span class="status-live">Live</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">TrialTracker</span> <span class="project-tagline">— Real-Time Court Case Coverage Platform</span>
-            <div class="project-description">Modular live trial coverage: real-time updates, timeline tracking, legal analysis aggregation. Swappable to any high-profile case.</div>
-            <div class="project-insight">Infrastructure that can spin up viral coverage for any major trial in hours.</div>
-            <div class="project-meta"><span class="status-paused">Paused</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">MeowBook</span> <span class="project-tagline">— Facebook for Cats</span>
-            <div class="project-description">Full social network replica: profiles, news feed, friend requests, DMs, reactions, comments, photo sharing — everything Facebook has, but for cats.</div>
-            <div class="project-insight">A technical flex disguised as a joke. Proves ability to replicate complex social platform architecture.</div>
-            <div class="project-meta"><a href="https://meow-book-social-felines.vercel.app">meow-book-social-felines.vercel.app</a> • <span class="status-paused">Paused</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">Switchcast</span> <span class="project-tagline">— Custom Sports Audio Streaming</span>
-            <div class="project-description">Strip commentary and ads from live sports streams → inject custom narration from podcasts. Choose your narrator. ESPN-inspired UI with glitch effects.</div>
-            <div class="project-insight">The unbundling of sports media. Licensing deals with podcasters + sports networks = massive revenue potential.</div>
-            <div class="project-meta"><a href="https://audio-override.vercel.app">audio-override.vercel.app</a> • <span class="status-progress">In Progress</span></div>
-        </div>
-
-        <!-- MOBILE & BROWSER EXTENSIONS -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Mobile & Browser Extensions (Published)</h3>
-        
-        <div class="project">
-            <span class="project-name">Lovers</span> <span class="project-tagline">— Apple Watch Proximity App</span>
-            <div class="project-description">Real-time proximity tracking for couples. Anonymous pairing code — no accounts. Live distance display, haptic feedback at thresholds. Privacy-first. Published on App Store.</div>
-            <div class="project-insight">Published on the actual App Store. Most people never ship through Apple's review process.</div>
-            <div class="project-meta"><a href="https://apps.apple.com/us/app/lovers69/id6751810888">App Store</a> • <a href="https://knowyourlover.life">knowyourlover.life</a> • <span class="status-live">Live</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">NoBuffer</span> <span class="project-tagline">— Chrome Extension for Buffer-Free Streaming</span>
-            <div class="project-description">Real-time video stream monitoring that warns about buffering before it interrupts. Analyzes buffer health, throughput, quality degradation. 100% local processing. Published on Chrome Web Store.</div>
-            <div class="project-meta"><a href="https://chromewebstore.google.com/detail/nobuffertoday/cdnameniehoaajfeophfcadegnhfmcki">Chrome Web Store</a> • <a href="https://nobuffer.today">nobuffer.today</a> • <span class="status-live">Live</span></div>
-        </div>
-
-        <!-- EDTECH & LANGUAGE LEARNING -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">EdTech & Language Learning</h3>
-        
-        <div class="project">
-            <span class="project-name">ThaiWhisperer</span> <span class="project-tagline">— Voice-Powered Thai Language Learning</span>
-            <div class="project-description">Record yourself speaking Thai → AI transcribes and translates to verify pronunciation → save audio to profile for replay and practice.</div>
-            <div class="project-insight">Language learning is a $15B market. This solves the "am I saying it right?" problem Duolingo doesn't.</div>
-            <div class="project-meta"><a href="https://www.thaiwhisperer.life">thaiwhisperer.life</a> • <span class="status-paused">Paused</span></div>
-        </div>
-
-        <!-- TRAVEL & UTILITIES -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Travel & Utilities</h3>
-        
-        <div class="project">
-            <span class="project-name">ATM Buddy</span> <span class="project-tagline">— Community ATM Finder for Asia</span>
-            <div class="project-description">Find ATMs that accept international cards. Real-time status reports, verified machines. Crowd-sourced scam detection — users flag predatory ATMs with hidden fees or card-skimming.</div>
-            <div class="project-insight">Scam prevention turns utility into social good.</div>
-            <div class="project-meta"><a href="https://atm-buddy.vercel.app">atm-buddy.vercel.app</a> • <span class="status-progress">In Progress</span></div>
-        </div>
-
-        <!-- GOVTECH & CIVIC INFRASTRUCTURE -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">GovTech & Civic Infrastructure</h3>
-        
-        <div class="project">
-            <span class="project-name">Housing Authority Outreach</span> <span class="project-tagline">— Affordable Housing Management Platform</span>
-            <div class="project-description">Digital platform for housing authorities: application management, resident communications, staff workflows. AI-powered application analysis, Google Calendar/Sheets integration.</div>
-            <div class="project-insight">GovTech that actually ships. The kind of civic infrastructure modernization that wins government contracts.</div>
-            <div class="project-meta"><a href="https://housingauthorityoutreach.website">housingauthorityoutreach.website</a> • <span class="status-pending">Pending</span></div>
-        </div>
-
-        <!-- E-COMMERCE -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">E-Commerce</h3>
-        
-        <div class="project">
-            <span class="project-name">PawPrint Toys</span> <span class="project-tagline">— Custom Cat Toy E-Commerce</span>
-            <div class="project-description">Handmade cat toy marketplace with product browsing, filters, customization builder. Playful animated shopping experience. Full e-commerce with Stripe.</div>
-            <div class="project-insight">Full-stack e-commerce from scratch — proves ability to ship complete consumer products.</div>
-            <div class="project-meta"><a href="https://pawprints.world">pawprints.world</a> • <span class="status-progress">In Progress</span></div>
-        </div>
-
-        <!-- CLIENT WORK & FREELANCE -->
-        <h3 style="font-family: 'Oswald', sans-serif; font-size: 16px; color: #764ba2; margin: 25px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">Client Work & Freelance</h3>
-        
-        <div class="project">
-            <span class="project-name">Sherry's Taipei Bites</span> <span class="project-tagline">— Culinary Tour Landing Page</span>
-            <div class="project-description">Landing page for exclusive food tour business in Taipei. Local expert-led tours with About, Featured Tours, Testimonials, Contact. Fully responsive.</div>
-            <div class="project-meta"><a href="https://sherrys-taipei-bites.vercel.app">sherrys-taipei-bites.vercel.app</a> • <span class="status-live">Live</span></div>
-        </div>
-        
-        <div class="project">
-            <span class="project-name">Bangkok Bodega</span> <span class="project-tagline">— NYC Deli Pop-Up in Bangkok</span>
-            <div class="project-description">Marketing site for NYC-style deli sandwich pop-up bringing authentic bodega sandwiches to Bangkok. Hero, brand story, menu, team, location, reviews.</div>
-            <div class="project-insight">Not just building software — building businesses. From concept to brand to landing page to launch.</div>
-            <div class="project-meta"><a href="https://bangkokbodega.food">bangkokbodega.food</a> • <span class="status-live">Live</span></div>
-        </div>
-
     </div>
-</div>
-
 </body>
 </html>
