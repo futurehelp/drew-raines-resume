@@ -1,8 +1,17 @@
-'use client';
-import { useState } from 'react';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
-const hero = 'https://www.papermag.com/media-library/image.jpg?coordinates=0%2C446%2C0%2C1554&height=900&id=68452874&quality=70&width=1800';
-const story = [
+export const dynamic = 'force-dynamic';
+
+export default function Page() {
+  const source = readFileSync(join(process.cwd(), 'index.html'), 'utf8');
+  const style = source.match(/<style[^>]*>([\s\S]*?)<\/style>/i)?.[1] ?? '';
+  const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? source;
+
+  return <><style dangerouslySetInnerHTML={{ __html: style }} /><div dangerouslySetInnerHTML={{ __html: body }} /></>;
+}
+
+/*
   `“There’s a thing that rings inside of me when I know something is right for me,” Tyla says. “If I don’t have that feeling, then I know it’s not meant to be. And when I have a feeling or a vision and I see it actually happen, it’s like I literally have superpowers.”`,
   `The singer-songwriter and global pop star is calling from her hotel room in New York, where she was still arriving from the airport when we started the call — “it may break up, she’s still in the elevator,” her publicist warned. I am bracing myself for a travel-worn, sparing interviewee, but when Tyla greets me moments later, she’s as ebullient as ever.`,
   `She trills and giggles and growls and jokes, and is exactly in conversation as she is in her music; relaxed, playfully coy, charmingly irreverent, and then suddenly, subtly commanding.`,
