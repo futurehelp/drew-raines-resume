@@ -10,7 +10,10 @@ export default function Page() {
     .replaceAll('January 2023 - June 2023', 'February 2024 - March 2024')
     .replaceAll('beginning in January 2022', 'beginning in January 2023')
     .replaceAll('ETHDenver in February 2023', 'ETHDenver 2024 during the February 23-March 2 BUIDLathon window');
-  const body = corrected.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? corrected;
+  const body = (corrected.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? corrected)
+    .replaceAll('January 2023 - June 2023', 'February 2024 - March 2024')
+    .replaceAll('beginning in January 2022', 'beginning in January 2023')
+    .replaceAll('Presented the working prototype at ETHDenver in February 2023', 'Presented the working prototype at ETHDenver 2024 during the February 23-March 2 BUIDLathon window');
 
   return <><style dangerouslySetInnerHTML={{ __html: style }} /><div dangerouslySetInnerHTML={{ __html: body }} /></>;
 }
