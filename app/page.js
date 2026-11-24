@@ -10,7 +10,6 @@ export default function Page() {
 
   return <><style dangerouslySetInnerHTML={{ __html: style }} /><div dangerouslySetInnerHTML={{ __html: body }} /></>;
 }
-
 /*
   `“There’s a thing that rings inside of me when I know something is right for me,” Tyla says. “If I don’t have that feeling, then I know it’s not meant to be. And when I have a feeling or a vision and I see it actually happen, it’s like I literally have superpowers.”`,
   `The singer-songwriter and global pop star is calling from her hotel room in New York, where she was still arriving from the airport when we started the call — “it may break up, she’s still in the elevator,” her publicist warned. I am bracing myself for a travel-worn, sparing interviewee, but when Tyla greets me moments later, she’s as ebullient as ever.`,
@@ -44,3 +43,4 @@ export default function Page(){
   <footer><div className="logo">PAPER</div><div>© PAPER COMMUNICATIONS 2026</div><div>INSTAGRAM　 TIKTOK　 CONTACT</div></footer>
  </main>
 }
+*/
