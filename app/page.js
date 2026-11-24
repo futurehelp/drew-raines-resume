@@ -6,7 +6,11 @@ export const dynamic = 'force-dynamic';
 export default function Page() {
   const source = readFileSync(join(process.cwd(), 'index.html'), 'utf8');
   const style = source.match(/<style[^>]*>([\s\S]*?)<\/style>/i)?.[1] ?? '';
-  const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? source;
+  const corrected = source
+    .replaceAll('January 2023 - June 2023', 'February 2024 - March 2024')
+    .replaceAll('beginning in January 2022', 'beginning in January 2023')
+    .replaceAll('ETHDenver in February 2023', 'ETHDenver 2024 during the February 23-March 2 BUIDLathon window');
+  const body = corrected.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? corrected;
 
   return <><style dangerouslySetInnerHTML={{ __html: style }} /><div dangerouslySetInnerHTML={{ __html: body }} /></>;
 }
